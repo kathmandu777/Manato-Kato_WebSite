@@ -4,594 +4,1144 @@
   padding: 0;
 }
 
-header {
-  width: 100%;
-  height: 600px;
-  background-image: url("../image/hex.jpg");
-  border-bottom: 1px solid #aba9a9;
-  background-size: cover;
-  position: relative;
-  /*title*/
-  /*list*/
-  /*
+/*
+
+
+
+
+スマホ用メディアクエリ　ブレイクポイント　～559px*/
+@media screen and (max-width: 559px) {
+  header {
+    width: 100%;
+    height: 230px;
+    background-image: url("../image/hex.jpg");
+    border-bottom: 1px solid #aba9a9;
+    background-size: cover;
+    position: relative;
+    /*トグルボタンが押されたときに付与するクラス*/
+    /*トグルボタンのスタイルを指定*/
+    /* 最初のspanをマイナス45度に */
+    /* 2番目と3番目のspanを45度に */
+    /*title*/
+    /*
         これより上が本来のヘッダー
         これより下は自己紹介文の名前と写真
         */
-}
-
-header h1 {
-  padding-left: 2%;
-  line-height: 80px;
-  float: left;
-  color: red;
-  font-family: Comic Sans MS;
-}
-
-header ul {
-  float: right;
-  list-style: none;
-  margin-right: 0 10px 0 0;
-  line-height: 80px;
-}
-
-header ul li {
-  display: inline-block;
-}
-
-header ul li a {
-  color: black;
-  font-size: 22px;
-}
-
-header ul li:hover {
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
-}
-
-header #my_name {
-  width: 50%;
-  /*position center*/
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-header #my_name h2 {
-  font-size: 80px;
-  font-family: 'Sacramento', cursive;
-  color: black;
-}
-
-header #my_name .family_name {
-  text-align: center;
-}
-
-header #my_name .last_name {
-  text-align: left;
-}
-
-header #face_image {
-  width: 20%;
-  /*position center*/
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(80%, -50%);
-}
-
-/*
+  }
+  header nav.NavMenu {
+    position: fixed;
+    /*表示位置を固定*/
+    z-index: 2;
+    /*重ね順を変更*/
+    top: 0;
+    /*表示位置を指定*/
+    left: 0;
+    /*表示位置を指定*/
+    background: #fff;
+    /*背景を白にする*/
+    color: #000;
+    /*文字色を黒にする*/
+    text-align: center;
+    /*テキストを中央揃え*/
+    width: 100%;
+    /*全幅表示*/
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    /*ナビを上に隠す*/
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+    /*アニメーションの時間を指定*/
+  }
+  header nav.NavMenu ul {
+    background: #ccc;
+    /*背景をグレーにする*/
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  header nav.NavMenu ul li {
+    font-size: 1.1em;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px dotted #333;
+  }
+  header nav.NavMenu ul li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+    /*最後のメニュー項目のみ下線を消す*/
+  }
+  header nav.NavMenu ul li a {
+    display: block;
+    /*クリックできる領域を広げる*/
+    color: #000;
+    padding: 1em 0;
+  }
+  header nav.NavMenu.active {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  header .Toggle {
+    display: block;
+    position: fixed;
+    /* bodyに対しての絶対位置指定 */
+    right: 13px;
+    top: 12px;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    z-index: 3;
+  }
+  header .Toggle span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    border-bottom: solid 3px #000;
+    -webkit-transition: .35s ease-in-out;
+    /*変化の速度を指定*/
+    /*変化の速度を指定*/
+    transition: .35s ease-in-out;
+    /*変化の速度を指定*/
+    left: 6px;
+  }
+  header .Toggle span:nth-child(1) {
+    top: 9px;
+  }
+  header .Toggle span:nth-child(2) {
+    top: 18px;
+  }
+  header .Toggle span:nth-child(3) {
+    top: 27px;
+  }
+  header .Toggle.active span:nth-child(1) {
+    top: 18px;
+    left: 6px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  header .Toggle.active span:nth-child(2),
+  header .Toggle.active span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  header h1 {
+    padding-left: 2%;
+    font-size: 30px;
+    padding-top: 2.6%;
+    float: left;
+    color: red;
+    font-family: Comic Sans MS;
+  }
+  header #my_name {
+    width: 50%;
+    /*position center*/
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  header #my_name h2 {
+    font-size: 40px;
+    font-family: 'Sacramento', cursive;
+    color: black;
+  }
+  header #my_name .family_name {
+    text-align: right;
+  }
+  header #my_name .last_name {
+    text-align: left;
+  }
+  header #face_image {
+    width: 20%;
+    /*position center*/
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(80%, -50%);
+  }
+  /*
     
     これより上ヘッダー＆名前
     これより下プロフィール
 
     */
-.profile_content {
-  width: 100%;
-  margin: 0 auto;
-  background-color: white;
-  /*性別*/
-  /*誕生日*/
-  /*豊田高専*/
-  /*夢*/
-  /*
+  .profile_content {
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    /*性別*/
+    /*誕生日*/
+    /*豊田高専*/
+    /*夢*/
+    /*
         
         これより上自己紹介カード風
         これより下趣味
         
         */
-  /*
+    /*
 
         これより上趣味
         これより下スキル
 
         */
-  /*
+    /*
         スキル
         プログラミング言語
         */
-}
-
-.profile_content #profile {
-  width: 40%;
-  text-align: center;
-  margin: 40px auto;
-  position: relative;
-  padding: 0.5em 1.5em;
-  border-top: solid 2px black;
-  border-bottom: solid 2px black;
-}
-
-.profile_content #profile:before, .profile_content #profile:after {
-  content: '';
-  position: absolute;
-  top: -10px;
-  width: 2px;
-  height: calc(100% + 20px);
-  background-color: black;
-}
-
-.profile_content #profile:before {
-  left: 10px;
-}
-
-.profile_content #profile:after {
-  right: 10px;
-}
-
-.profile_content #gender {
-  margin: 0 auto;
-  width: 80%;
-  height: 300px;
-  background-image: url("../image/gender_background2.png");
-  background-size: cover;
-  border-radius: 10px;
-  position: relative;
-}
-
-.profile_content #gender .title {
-  position: absolute;
-  top: 20%;
-  left: 5%;
-  font-family: Times New Roman;
-  font-size: 50px;
-}
-
-.profile_content #gender .ans {
-  position: absolute;
-  top: 45%;
-  left: 45%;
-  font-size: 40px;
-}
-
-.profile_content #gender p {
-  position: absolute;
-  top: 70%;
-  left: 80%;
-  font-size: 20px;
-}
-
-.profile_content #birthday {
-  margin: 20px auto;
-  background-image: url("../image/gift.jpg");
-  background-size: cover;
-  border-radius: 10px;
-  width: 80%;
-  height: 400px;
-  position: relative;
-}
-
-.profile_content #birthday .title {
-  position: absolute;
-  top: 55%;
-  left: 5%;
-  font-size: 40px;
-  color: white;
-}
-
-.profile_content #birthday .ans {
-  position: absolute;
-  top: 65%;
-  left: 10%;
-  font-size: 40px;
-  color: white;
-}
-
-.profile_content #birthday p {
-  position: absolute;
-  top: 78%;
-  left: 20%;
-  font-size: 20px;
-  color: white;
-}
-
-.profile_content #my_school {
-  margin: 10px auto;
-  background-image: url("../image/toyotakosen3.jpg");
-  background-size: cover;
-  border-radius: 10px;
-  width: 80%;
-  height: 500px;
-  position: relative;
-}
-
-.profile_content #my_school .title {
-  position: absolute;
-  top: 70%;
-  left: 5%;
-  font-size: 40px;
-}
-
-.profile_content #my_school .ans {
-  position: absolute;
-  top: 80%;
-  left: 10%;
-  font-size: 30px;
-}
-
-.profile_content #my_dream {
-  margin: 5px auto;
-  background-image: url("../image/imagination.jpg");
-  background-size: cover;
-  border-radius: 10px;
-  width: 80%;
-  height: 500px;
-  position: relative;
-}
-
-.profile_content #my_dream .my_dream_content {
-  width: 60%;
-  float: right;
-}
-
-.profile_content #my_dream .my_dream_content .title {
-  padding: 10% 3% 0 0;
-  text-align: right;
-  font-size: 40px;
-}
-
-.profile_content #my_dream .my_dream_content .ans {
-  padding: 20% 3% 0 0;
-  text-align: right;
-  font-size: 34px;
-  color: white;
-}
-
-.profile_content #my_hobby {
-  margin: 50px auto;
-}
-
-.profile_content #my_hobby .hobby_title {
-  font-size: 36px;
-  text-align: center;
-  color: orange;
-}
-
-.profile_content #my_hobby .hobby_content {
-  width: 90%;
-  margin: 5px auto;
-  background-color: #ffe6ce;
-  border: 4px solid orange;
-  border-radius: 3em .8em 3em .7em/.9em 2em .8em 3em;
-  /*レゴ*/
-  /*ロボカップ*/
-}
-
-.profile_content #my_hobby .hobby_content #lego {
-  margin: 20px;
-  text-align: center;
-  position: relative;
-}
-
-.profile_content #my_hobby .hobby_content #lego h3 {
-  position: absolute;
-  top: 18%;
-  left: 18%;
-  color: red;
-  font-size: 34px;
-}
-
-.profile_content #my_hobby .hobby_content #lego p {
-  width: 53%;
-  position: absolute;
-  top: 30%;
-  left: 22%;
-  font-size: 22px;
-  text-align: left;
-}
-
-.profile_content #my_hobby .hobby_content #robocup {
-  width: 80%;
-  margin: 50px auto;
-  background-color: white;
-  position: relative;
-  border: solid 2px greenyellow;
-  border-radius: 3px 0 3px 0;
-}
-
-.profile_content #my_hobby .hobby_content #robocup:before, .profile_content #my_hobby .hobby_content #robocup:after {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border: solid 2px greenyellow;
-  border-radius: 50%;
-}
-
-.profile_content #my_hobby .hobby_content #robocup:after {
-  top: -12px;
-  left: -12px;
-}
-
-.profile_content #my_hobby .hobby_content #robocup:before {
-  bottom: -12px;
-  right: -12px;
-}
-
-.profile_content #my_hobby .hobby_content #robocup h3 {
-  padding: 10px;
-  margin: 10px;
-  width: 20%;
-  color: #494949;
-  background: #f4f4f4;
-  border-left: solid 5px #7db4e6;
-  border-bottom: solid 3px #d7d7d7;
-}
-
-.profile_content #my_hobby .hobby_content #robocup p {
-  padding-left: 50px;
-  padding-right: 10px;
-}
-
-.profile_content #my_hobby .hobby_content #robocup h5 {
-  padding-left: 30px;
-  font-size: 15px;
-}
-
-.profile_content #my_hobby .hobby_content #robocup ul {
-  padding-left: 58px;
-}
-
-.profile_content #my_hobby .hobby_content #table_tennis {
-  width: 77%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-  position: relative;
-  border: 1.5vw solid white;
-  background-color: blue;
-}
-
-.profile_content #my_hobby .hobby_content #table_tennis:before {
-  content: "";
-  display: block;
-  padding-top: 55%;
-  /* 高さを幅の75%に固定 */
-}
-
-.profile_content #my_hobby .hobby_content #table_tennis #line_width {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  border-bottom: 4px solid white;
-}
-
-.profile_content #my_hobby .hobby_content #table_tennis #line_height {
-  position: absolute;
-  top: -8%;
-  left: 49%;
-  height: 116%;
-  border-right: 8px solid white;
-}
-
-.profile_content #my_hobby .hobby_content #table_tennis h3 {
-  position: absolute;
-  top: 2%;
-  left: 2%;
-  bottom: 0;
-  right: 0;
-  color: orange;
-  font-size: 34px;
-}
-
-.profile_content #my_hobby .hobby_content #table_tennis p {
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  bottom: 0;
-  right: 0;
-  padding: 10px;
-  font-size: 22px;
-}
-
-.profile_content #my_skill {
-  position: relative;
-  margin: 2em auto;
-  padding: 1.2em;
-  width: 90%;
-  border: 2px solid #ff9ece;
-  color: #555555;
-  background-color: #fff;
-  -webkit-box-shadow: 2px 2px 1px #c7c7c7;
-          box-shadow: 2px 2px 1px #c7c7c7;
-  border-radius: 8px;
-}
-
-.profile_content #my_skill .skill_title {
-  position: absolute;
-  top: -0.6em;
-  left: 41%;
-  padding: 0 9px;
-  line-height: 1;
-  font-size: 40px;
-  background: #FFF;
-  color: #95ccff;
-  font-weight: bold;
-}
-
-.profile_content #my_skill .skill_content .rubik {
-  width: 80%;
-  margin: 50px auto;
-  position: relative;
-  background: #efefef;
-  overflow: hidden;
-}
-
-.profile_content #my_skill .skill_content .rubik:before, .profile_content #my_skill .skill_content .rubik:after {
-  position: absolute;
-  top: 0;
-  content: '';
-  width: 10px;
-  height: 100%;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.profile_content #my_skill .skill_content .rubik:before {
-  border-left: dotted 2px #15adc1;
-  border-top: dotted 2px #15adc1;
-  border-bottom: dotted 2px #15adc1;
-  left: 0;
-}
-
-.profile_content #my_skill .skill_content .rubik:after {
-  border-top: dotted 2px #15adc1;
-  border-right: dotted 2px #15adc1;
-  border-bottom: dotted 2px #15adc1;
-  right: 0;
-}
-
-.profile_content #my_skill .skill_content .rubik h3 {
-  width: 17%;
-  position: relative;
-  padding-left: 25px;
-  margin-left: 20px;
-  color: #d3d34f;
-}
-
-.profile_content #my_skill .skill_content .rubik h3:before {
-  position: absolute;
-  content: '';
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border: none;
-  border-left: solid 15px transparent;
-  border-bottom: solid 15px #77c3df;
-}
-
-.profile_content #my_skill .skill_content .rubik h3:after {
-  position: absolute;
-  content: '';
-  bottom: -3px;
-  left: 10px;
-  width: 100%;
-  border-bottom: solid 3px #77c3df;
-}
-
-.profile_content #my_skill .skill_content .rubik .paragraph {
-  padding: 20px 20px 20px 50px;
-  width: 65%;
-  float: left;
-}
-
-.profile_content #my_skill .skill_content .rubik .paragraph h5 {
-  padding: 15px 0 5px 0;
-  font-size: 16px;
-}
-
-.profile_content #my_skill .skill_content .rubik .paragraph #p2 {
-  padding-left: 3%;
-}
-
-.profile_content #my_skill .skill_content .rubik img {
-  width: 25%;
-  float: right;
-}
-
-.profile_content #my_skill .skill_content .rubik .img {
-  padding-right: 20px;
-}
-
-.profile_content #programming_languages {
-  width: 90%;
-  margin: 30px auto;
-  background: radial-gradient(800px, #e3f2fd, #64b5f6);
-  border-radius: 7px;
-}
-
-.profile_content #programming_languages .title {
-  padding: 20px;
-  font-size: 30px;
-}
-
-.profile_content #programming_languages .programming_languages_content {
-  padding: 10px;
-}
-
-.profile_content #programming_languages .programming_languages_content ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.profile_content #programming_languages .programming_languages_content ul li {
-  width: 46%;
-  margin: 2%;
-  list-style: none;
-}
-
-.profile_content #programming_languages .programming_languages_content ul li h3 {
-  font-size: 26px;
-  width: 50%;
-  margin: 0 auto;
-  color: yellow;
-  padding: 10px 0 0 0;
-  text-align: center;
-}
-
-.profile_content #programming_languages .programming_languages_content ul li p {
-  width: 100%;
-  text-align: center;
-}
-
-.profile_content #programming_languages .programming_languages_content ul li .img {
-  text-align: center;
-}
-
-.profile_content #programming_languages .programming_languages_content ul li .img img {
-  width: 100%;
-  height: auto;
-}
-
-.profile_content #advantages_disadvantages {
-  width: 90%;
-  margin: 30px auto;
-  background: radial-gradient(800px, #5731ff, #fca9ff);
-  border-radius: 7px;
-}
-
-.profile_content #advantages_disadvantages .title {
-  padding: 20px;
-  font-size: 30px;
-}
-
-.profile_content #my_history {
-  width: 90%;
-  margin: 30px auto;
-  background: radial-gradient(800px, #bbc0a1, #fff89c);
-  border-radius: 7px;
-}
-
-.profile_content #my_history .title {
-  padding: 20px;
-  font-size: 30px;
+  }
+  .profile_content #profile {
+    width: 40%;
+    text-align: center;
+    margin: 40px auto;
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+  }
+  .profile_content #profile:before, .profile_content #profile:after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: calc(100% + 20px);
+    background-color: black;
+  }
+  .profile_content #profile:before {
+    left: 10px;
+  }
+  .profile_content #profile:after {
+    right: 10px;
+  }
+  .profile_content #gender {
+    margin: 0 auto;
+    width: 96%;
+    height: 120px;
+    background-image: url("../image/gender_background2.png");
+    background-size: cover;
+    border-radius: 10px;
+    position: relative;
+  }
+  .profile_content #gender .title {
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    font-family: Times New Roman;
+    font-size: 24px;
+  }
+  .profile_content #gender .ans {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    font-size: 20px;
+  }
+  .profile_content #gender p {
+    position: absolute;
+    top: 74%;
+    left: 65%;
+    font-size: 18px;
+  }
+  .profile_content #birthday {
+    margin: 20px auto;
+    background-image: url("../image/gift.jpg");
+    background-size: cover;
+    border-radius: 10px;
+    width: 96%;
+    height: 100px;
+    position: relative;
+  }
+  .profile_content #birthday .title {
+    position: absolute;
+    top: 14%;
+    left: 5%;
+    font-size: 26px;
+    color: white;
+  }
+  .profile_content #birthday .ans {
+    position: absolute;
+    top: 40%;
+    left: 7.5%;
+    font-size: 24px;
+    color: white;
+  }
+  .profile_content #birthday p {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    font-size: 12px;
+    color: white;
+  }
+  .profile_content #my_school {
+    margin: 10px auto;
+    background-image: url("../image/toyotakosen3.jpg");
+    background-size: cover;
+    border-radius: 10px;
+    width: 96%;
+    height: 100px;
+    position: relative;
+  }
+  .profile_content #my_school .title {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    font-size: 26px;
+    color: white;
+  }
+  .profile_content #my_school .ans {
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    font-size: 20px;
+    padding-left: 8%;
+    color: white;
+  }
+  .profile_content #my_dream {
+    margin: 5px auto;
+    background-image: url("../image/imagination.jpg");
+    background-size: cover;
+    border-radius: 10px;
+    width: 96%;
+    height: 200px;
+    position: relative;
+  }
+  .profile_content #my_dream .my_dream_content {
+    width: 80%;
+    float: right;
+  }
+  .profile_content #my_dream .my_dream_content .title {
+    padding: 5% 3% 0 0;
+    text-align: right;
+    font-size: 26px;
+  }
+  .profile_content #my_dream .my_dream_content .ans {
+    padding: 3% 3% 0 0;
+    text-align: right;
+    font-size: 20px;
+    color: white;
+  }
+  .profile_content #my_hobby {
+    margin: 50px auto;
+  }
+  .profile_content #my_hobby .hobby_title {
+    font-size: 36px;
+    text-align: center;
+    color: orange;
+  }
+  .profile_content #my_hobby .hobby_content {
+    width: 98%;
+    margin: 5px auto;
+    background-color: #ffe6ce;
+    border: 4px solid orange;
+    border-radius: 3em .8em 3em .7em/.9em 2em .8em 3em;
+    /*レゴ*/
+    /*ロボカップ*/
+  }
+  .profile_content #my_hobby .hobby_content #lego {
+    margin: 20px;
+    text-align: center;
+    position: relative;
+  }
+  .profile_content #my_hobby .hobby_content #lego h3 {
+    position: absolute;
+    top: 7%;
+    left: 16%;
+    color: red;
+    font-size: 24px;
+  }
+  .profile_content #my_hobby .hobby_content #lego p {
+    width: 60%;
+    position: absolute;
+    top: 26%;
+    left: 20%;
+    font-size: 10px;
+    text-align: left;
+  }
+  .profile_content #my_hobby .hobby_content #robocup {
+    width: 92%;
+    margin: 50px auto;
+    background-color: white;
+    position: relative;
+    border: solid 2px greenyellow;
+    border-radius: 3px 0 3px 0;
+  }
+  .profile_content #my_hobby .hobby_content #robocup:before, .profile_content #my_hobby .hobby_content #robocup:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: solid 2px greenyellow;
+    border-radius: 50%;
+  }
+  .profile_content #my_hobby .hobby_content #robocup:after {
+    top: -12px;
+    left: -12px;
+  }
+  .profile_content #my_hobby .hobby_content #robocup:before {
+    bottom: -12px;
+    right: -12px;
+  }
+  .profile_content #my_hobby .hobby_content #robocup h3 {
+    padding: 10px;
+    margin: 10px;
+    width: 40%;
+    color: #494949;
+    background: #f4f4f4;
+    border-left: solid 5px #7db4e6;
+    border-bottom: solid 3px #d7d7d7;
+  }
+  .profile_content #my_hobby .hobby_content #robocup p {
+    padding-left: 7%;
+    padding-right: 10px;
+    font-size: 10px;
+  }
+  .profile_content #my_hobby .hobby_content #robocup h5 {
+    padding-left: 5%;
+    font-size: 15px;
+  }
+  .profile_content #my_hobby .hobby_content #robocup ul {
+    padding-left: 12%;
+    font-size: 14px;
+  }
+  .profile_content #my_hobby .hobby_content #table_tennis {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    position: relative;
+    border: 1.5vw solid white;
+    background-color: blue;
+  }
+  .profile_content #my_hobby .hobby_content #table_tennis:before {
+    content: "";
+    display: block;
+    padding-top: 55%;
+    /* 高さを幅の75%に固定 */
+  }
+  .profile_content #my_hobby .hobby_content #table_tennis #line_width {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-bottom: 4px solid white;
+  }
+  .profile_content #my_hobby .hobby_content #table_tennis #line_height {
+    position: absolute;
+    top: -8%;
+    left: 49%;
+    height: 116%;
+    border-right: 8px solid white;
+  }
+  .profile_content #my_hobby .hobby_content #table_tennis h3 {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    bottom: 0;
+    right: 0;
+    color: orange;
+    font-size: 20px;
+  }
+  .profile_content #my_hobby .hobby_content #table_tennis p {
+    position: absolute;
+    top: 14%;
+    left: 5%;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 10px;
+  }
+  .profile_content #my_skill {
+    position: relative;
+    margin: 2em auto;
+    padding: 1.2em;
+    width: 90%;
+    border: 2px solid #ff9ece;
+    color: #555555;
+    background-color: #fff;
+    -webkit-box-shadow: 2px 2px 1px #c7c7c7;
+            box-shadow: 2px 2px 1px #c7c7c7;
+    border-radius: 8px;
+  }
+  .profile_content #my_skill .skill_title {
+    position: absolute;
+    top: -0.6em;
+    left: 23%;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 40px;
+    background: #FFF;
+    color: #95ccff;
+    font-weight: bold;
+  }
+  .profile_content #my_skill .skill_content .rubik {
+    width: 100%;
+    margin: 50px auto;
+    position: relative;
+    background: #efefef;
+    overflow: hidden;
+  }
+  .profile_content #my_skill .skill_content .rubik:before, .profile_content #my_skill .skill_content .rubik:after {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 10px;
+    height: 100%;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .profile_content #my_skill .skill_content .rubik:before {
+    border-left: dotted 2px #15adc1;
+    border-top: dotted 2px #15adc1;
+    border-bottom: dotted 2px #15adc1;
+    left: 0;
+  }
+  .profile_content #my_skill .skill_content .rubik:after {
+    border-top: dotted 2px #15adc1;
+    border-right: dotted 2px #15adc1;
+    border-bottom: dotted 2px #15adc1;
+    right: 0;
+  }
+  .profile_content #my_skill .skill_content .rubik h3 {
+    width: 55%;
+    position: relative;
+    padding-left: 25px;
+    margin-left: 20px;
+    color: #d3d34f;
+  }
+  .profile_content #my_skill .skill_content .rubik h3:before {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: solid 15px transparent;
+    border-bottom: solid 15px #77c3df;
+  }
+  .profile_content #my_skill .skill_content .rubik h3:after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 10px;
+    width: 100%;
+    border-bottom: solid 3px #77c3df;
+  }
+  .profile_content #my_skill .skill_content .rubik .paragraph {
+    padding: 10px;
+    width: 96%;
+    float: left;
+  }
+  .profile_content #my_skill .skill_content .rubik .paragraph h5 {
+    padding: 15px 0 5px 0;
+    font-size: 16px;
+  }
+  .profile_content #my_skill .skill_content .rubik .paragraph #p1 {
+    font-size: 14px;
+  }
+  .profile_content #my_skill .skill_content .rubik .paragraph #p2 {
+    padding-left: 3%;
+    font-size: 14px;
+  }
+  .profile_content #my_skill .skill_content .rubik img {
+    width: 40%;
+  }
+  .profile_content #my_skill .skill_content .rubik .img {
+    text-align: center;
+  }
+  .profile_content #programming_languages {
+    width: 99%;
+    margin: 30px auto;
+    background: radial-gradient(800px, #e3f2fd, #64b5f6);
+    border-radius: 7px;
+  }
+  .profile_content #programming_languages .title {
+    padding: 10px;
+    font-size: 22px;
+  }
+  .profile_content #programming_languages .programming_languages_content {
+    padding: 2px;
+  }
+  .profile_content #programming_languages .programming_languages_content ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .profile_content #programming_languages .programming_languages_content ul li {
+    width: 46%;
+    margin: 2%;
+    list-style: none;
+  }
+  .profile_content #programming_languages .programming_languages_content ul li h3 {
+    font-size: 26px;
+    width: 100%;
+    color: yellow;
+    padding: 10px 0 0 0;
+    text-align: center;
+  }
+  .profile_content #programming_languages .programming_languages_content ul li p {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+  }
+  .profile_content #programming_languages .programming_languages_content ul li .img {
+    text-align: center;
+  }
+  .profile_content #programming_languages .programming_languages_content ul li .img img {
+    width: 100%;
+    height: auto;
+  }
+  .profile_content #advantages_disadvantages {
+    width: 90%;
+    margin: 30px auto;
+    background: radial-gradient(800px, #5731ff, #fca9ff);
+    border-radius: 7px;
+  }
+  .profile_content #advantages_disadvantages .title {
+    padding: 20px;
+    font-size: 30px;
+  }
+  .profile_content #my_history {
+    width: 90%;
+    margin: 30px auto;
+    background: radial-gradient(800px, #bbc0a1, #fff89c);
+    border-radius: 7px;
+  }
+  .profile_content #my_history .title {
+    padding: 20px;
+    font-size: 30px;
+  }
+}
+
+/*
+
+
+
+
+タブレット用メディアクエリ　ブレイクポイント560～960px*/
+/*
+
+
+
+
+㍶用メディアクエリ　ブレイクポイント960px~　*/
+@media screen and (min-width: 960px) {
+  header {
+    width: 100%;
+    height: 600px;
+    background-image: url("../image/hex.jpg");
+    border-bottom: 1px solid #aba9a9;
+    background-size: cover;
+    position: relative;
+    /*title*/
+    /*list*/
+    /*
+        これより上が本来のヘッダー
+        これより下は自己紹介文の名前と写真
+        */
+  }
+  header h1 {
+    padding-left: 2%;
+    font-size: 30px;
+    padding-top: 2.6%;
+    float: left;
+    color: red;
+    font-family: Comic Sans MS;
+  }
+  header ul {
+    float: right;
+    list-style: none;
+    margin: 0 20px 0 0;
+    padding-top: 3.4%;
+  }
+  header ul li {
+    display: inline-block;
+  }
+  header ul li a {
+    color: black;
+    font-size: 22px;
+  }
+  header #my_name {
+    width: 50%;
+    /*position center*/
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  header #my_name h2 {
+    font-size: 80px;
+    font-family: 'Sacramento', cursive;
+    color: black;
+  }
+  header #my_name .family_name {
+    text-align: center;
+  }
+  header #my_name .last_name {
+    text-align: left;
+  }
+  header #face_image {
+    width: 20%;
+    /*position center*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(80%, -50%);
+  }
+  /*
+    
+    これより上ヘッダー＆名前
+    これより下プロフィール
+
+    */
+  .profile_content {
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    /*性別*/
+    /*誕生日*/
+    /*豊田高専*/
+    /*夢*/
+    /*
+        
+        これより上自己紹介カード風
+        これより下趣味
+        
+        */
+    /*
+
+        これより上趣味
+        これより下スキル
+
+        */
+    /*
+        スキル
+        プログラミング言語
+        */
+  }
+  .profile_content #profile {
+    width: 40%;
+    text-align: center;
+    margin: 40px auto;
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+  }
+  .profile_content #profile:before, .profile_content #profile:after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: calc(100% + 20px);
+    background-color: black;
+  }
+  .profile_content #profile:before {
+    left: 10px;
+  }
+  .profile_content #profile:after {
+    right: 10px;
+  }
+  .profile_content #gender {
+    margin: 0 auto;
+    width: 80%;
+    height: 300px;
+    background-image: url("../image/gender_background2.png");
+    background-size: cover;
+    border-radius: 10px;
+    position: relative;
+  }
+  .profile_content #gender .title {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    font-family: Times New Roman;
+    font-size: 50px;
+  }
+  .profile_content #gender .ans {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    font-size: 40px;
+  }
+  .profile_content #gender p {
+    position: absolute;
+    top: 70%;
+    left: 80%;
+    font-size: 20px;
+  }
+  .profile_content #birthday {
+    margin: 20px auto;
+    background-image: url("../image/gift.jpg");
+    background-size: cover;
+    border-radius: 10px;
+    width: 80%;
+    height: 400px;
+    position: relative;
+  }
+  .profile_content #birthday .title {
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    font-size: 40px;
+    color: white;
+  }
+  .profile_content #birthday .ans {
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    font-size: 40px;
+    color: white;
+  }
+  .profile_content #birthday p {
+    position: absolute;
+    top: 78%;
+    left: 20%;
+    font-size: 20px;
+    color: white;
+  }
+  .profile_content #my_school {
+    margin: 10px auto;
+    background-image: url("../image/toyotakosen3.jpg");
+    background-size: cover;
+    border-radius: 10px;
+    width: 80%;
+    height: 500px;
+    position: relative;
+  }
+  .profile_content #my_school .title {
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    font-size: 40px;
+    color: white;
+  }
+  .profile_content #my_school .ans {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    font-size: 26px;
+    color: white;
+  }
+  .profile_content #my_dream {
+    margin: 5px auto;
+    background-image: url("../image/imagination.jpg");
+    background-size: cover;
+    border-radius: 10px;
+    width: 80%;
+    height: 500px;
+    position: relative;
+  }
+  .profile_content #my_dream .my_dream_content {
+    width: 60%;
+    float: right;
+  }
+  .profile_content #my_dream .my_dream_content .title {
+    padding: 10% 3% 0 0;
+    text-align: right;
+    font-size: 40px;
+  }
+  .profile_content #my_dream .my_dream_content .ans {
+    padding: 25% 3% 0 0;
+    text-align: right;
+    font-size: 34px;
+    color: white;
+  }
+  .profile_content #my_hobby {
+    margin: 50px auto;
+  }
+  .profile_content #my_hobby .hobby_title {
+    font-size: 36px;
+    text-align: center;
+    color: orange;
+  }
+  .profile_content #my_hobby .hobby_content {
+    width: 90%;
+    margin: 5px auto;
+    background-color: #ffe6ce;
+    border: 4px solid orange;
+    border-radius: 3em .8em 3em .7em/.9em 2em .8em 3em;
+    /*レゴ*/
+    /*ロボカップ*/
+  }
+  .profile_content #my_hobby .hobby_content #lego {
+    margin: 20px;
+    text-align: center;
+    position: relative;
+  }
+  .profile_content #my_hobby .hobby_content #lego h3 {
+    position: absolute;
+    top: 18%;
+    left: 18%;
+    color: red;
+    font-size: 34px;
+  }
+  .profile_content #my_hobby .hobby_content #lego p {
+    width: 53%;
+    position: absolute;
+    top: 30%;
+    left: 22%;
+    font-size: 22px;
+    text-align: left;
+  }
+  .profile_content #my_hobby .hobby_content #robocup {
+    width: 80%;
+    margin: 50px auto;
+    background-color: white;
+    position: relative;
+    border: solid 2px greenyellow;
+    border-radius: 3px 0 3px 0;
+  }
+  .profile_content #my_hobby .hobby_content #robocup:before, .profile_content #my_hobby .hobby_content #robocup:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: solid 2px greenyellow;
+    border-radius: 50%;
+  }
+  .profile_content #my_hobby .hobby_content #robocup:after {
+    top: -12px;
+    left: -12px;
+  }
+  .profile_content #my_hobby .hobby_content #robocup:before {
+    bottom: -12px;
+    right: -12px;
+  }
+  .profile_content #my_hobby .hobby_content #robocup h3 {
+    padding: 10px;
+    margin: 10px;
+    width: 20%;
+    color: #494949;
+    background: #f4f4f4;
+    border-left: solid 5px #7db4e6;
+    border-bottom: solid 3px #d7d7d7;
+  }
+  .profile_content #my_hobby .hobby_content #robocup p {
+    padding-left: 50px;
+    padding-right: 10px;
+  }
+  .profile_content #my_hobby .hobby_content #robocup h5 {
+    padding-left: 30px;
+    font-size: 15px;
+  }
+  .profile_content #my_hobby .hobby_content #robocup ul {
+    padding-left: 58px;
+  }
+  .profile_content #my_hobby .hobby_content #table_tennis {
+    width: 77%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    position: relative;
+    border: 1.5vw solid white;
+    background-color: blue;
+  }
+  .profile_content #my_hobby .hobby_content #table_tennis:before {
+    content: "";
+    display: block;
+    padding-top: 55%;
+    /* 高さを幅の75%に固定 */
+  }
+  .profile_content #my_hobby .hobby_content #table_tennis #line_width {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-bottom: 4px solid white;
+  }
+  .profile_content #my_hobby .hobby_content #table_tennis #line_height {
+    position: absolute;
+    top: -8%;
+    left: 49%;
+    height: 116%;
+    border-right: 8px solid white;
+  }
+  .profile_content #my_hobby .hobby_content #table_tennis h3 {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    bottom: 0;
+    right: 0;
+    color: orange;
+    font-size: 34px;
+  }
+  .profile_content #my_hobby .hobby_content #table_tennis p {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 22px;
+  }
+  .profile_content #my_skill {
+    position: relative;
+    margin: 2em auto;
+    padding: 1.2em;
+    width: 90%;
+    border: 2px solid #ff9ece;
+    color: #555555;
+    background-color: #fff;
+    -webkit-box-shadow: 2px 2px 1px #c7c7c7;
+            box-shadow: 2px 2px 1px #c7c7c7;
+    border-radius: 8px;
+  }
+  .profile_content #my_skill .skill_title {
+    position: absolute;
+    top: -0.6em;
+    left: 41%;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 40px;
+    background: #FFF;
+    color: #95ccff;
+    font-weight: bold;
+  }
+  .profile_content #my_skill .skill_content .rubik {
+    width: 80%;
+    margin: 50px auto;
+    position: relative;
+    background: #efefef;
+    overflow: hidden;
+  }
+  .profile_content #my_skill .skill_content .rubik:before, .profile_content #my_skill .skill_content .rubik:after {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 10px;
+    height: 100%;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .profile_content #my_skill .skill_content .rubik:before {
+    border-left: dotted 2px #15adc1;
+    border-top: dotted 2px #15adc1;
+    border-bottom: dotted 2px #15adc1;
+    left: 0;
+  }
+  .profile_content #my_skill .skill_content .rubik:after {
+    border-top: dotted 2px #15adc1;
+    border-right: dotted 2px #15adc1;
+    border-bottom: dotted 2px #15adc1;
+    right: 0;
+  }
+  .profile_content #my_skill .skill_content .rubik h3 {
+    width: 25%;
+    position: relative;
+    padding-left: 25px;
+    margin-left: 20px;
+    color: #d3d34f;
+  }
+  .profile_content #my_skill .skill_content .rubik h3:before {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: solid 15px transparent;
+    border-bottom: solid 15px #77c3df;
+  }
+  .profile_content #my_skill .skill_content .rubik h3:after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 10px;
+    width: 100%;
+    border-bottom: solid 3px #77c3df;
+  }
+  .profile_content #my_skill .skill_content .rubik .paragraph {
+    padding: 20px 20px 20px 50px;
+    width: 60%;
+    float: left;
+  }
+  .profile_content #my_skill .skill_content .rubik .paragraph h5 {
+    padding: 15px 0 5px 0;
+    font-size: 16px;
+  }
+  .profile_content #my_skill .skill_content .rubik .paragraph #p2 {
+    padding-left: 3%;
+  }
+  .profile_content #my_skill .skill_content .rubik img {
+    width: 25%;
+    float: right;
+  }
+  .profile_content #my_skill .skill_content .rubik .img {
+    padding-right: 20px;
+  }
+  .profile_content #programming_languages {
+    width: 90%;
+    margin: 30px auto;
+    background: radial-gradient(800px, #e3f2fd, #64b5f6);
+    border-radius: 7px;
+  }
+  .profile_content #programming_languages .title {
+    padding: 20px;
+    font-size: 30px;
+  }
+  .profile_content #programming_languages .programming_languages_content {
+    padding: 10px;
+  }
+  .profile_content #programming_languages .programming_languages_content ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .profile_content #programming_languages .programming_languages_content ul li {
+    width: 46%;
+    margin: 2%;
+    list-style: none;
+  }
+  .profile_content #programming_languages .programming_languages_content ul li h3 {
+    font-size: 26px;
+    width: 50%;
+    margin: 0 auto;
+    color: yellow;
+    padding: 10px 0 0 0;
+    text-align: center;
+  }
+  .profile_content #programming_languages .programming_languages_content ul li p {
+    width: 100%;
+    text-align: center;
+  }
+  .profile_content #programming_languages .programming_languages_content ul li .img {
+    text-align: center;
+  }
+  .profile_content #programming_languages .programming_languages_content ul li .img img {
+    width: 100%;
+    height: auto;
+  }
+  .profile_content #advantages_disadvantages {
+    width: 90%;
+    margin: 30px auto;
+    background: radial-gradient(800px, #5731ff, #fca9ff);
+    border-radius: 7px;
+  }
+  .profile_content #advantages_disadvantages .title {
+    padding: 20px;
+    font-size: 30px;
+  }
+  .profile_content #my_history {
+    width: 90%;
+    margin: 30px auto;
+    background: radial-gradient(800px, #bbc0a1, #fff89c);
+    border-radius: 7px;
+  }
+  .profile_content #my_history .title {
+    padding: 20px;
+    font-size: 30px;
+  }
 }
 /*# sourceMappingURL=profile.css.map */
