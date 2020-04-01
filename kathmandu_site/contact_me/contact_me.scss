@@ -2,21 +2,62 @@
      margin: 0;
      padding: 0;
  }
+ /*
  
- #contact {
-     width: 60%;
-     padding-top: 20px;
-     margin: 20px auto;
-     h2 {
-         text-align: center;
-         border-bottom: black dashed 2px;
+ 
+ 
+ 
+ スマホ用メディアクエリ　ブレイクポイント　～559px*/
+ 
+ @media screen and (max-width: 559px) {
+     #contact {
+         width: 96%;
+         padding-top: 20px;
+         margin: 20px auto;
+         h2 {
+             text-align: center;
+             border-bottom: black dashed 2px;
+         }
+         #twitter {
+             text-align: center;
+             padding: 20px;
+         }
+         #gmail {
+             text-align: center;
+             padding: 20px;
+         }
      }
-     #twitter {
-         text-align: center;
-         padding: 20px;
-     }
-     #gmail {
-         text-align: center;
-         padding: 20px;
+ }
+ /*
+ 
+ 
+ 
+ 
+ タブレット用メディアクエリ　ブレイクポイント560～960px*/
+ 
+ @media screen and (min-width:600px) and (max-width:959px) {}
+ /*
+ 
+ 
+ 
+ ㍶用メディアクエリ　ブレイクポイント960px~　*/
+ 
+ @media screen and (min-width: 960px) {
+     #contact {
+         width: 60%;
+         padding-top: 20px;
+         margin: 20px auto;
+         h2 {
+             text-align: center;
+             border-bottom: black dashed 2px;
+         }
+         #twitter {
+             text-align: center;
+             padding: 20px;
+         }
+         #gmail {
+             text-align: center;
+             padding: 20px;
+         }
      }
  }

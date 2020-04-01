@@ -18,13 +18,21 @@
 <body>
     <header>
         <h1>Manato's Diary</h1>
-        <ul>
-            <li><a href="../home/home.html">Home</a></li>
-            <li><a href="../blog_categories/blog_categories.html">Blog Categories</a></li>
-            <li><a href="../profile/profile.html">Profile</a></li>
-            <li><a href="../link/link.html">Link</a></li>
-            <li><a href="../contact_me/contact_me.html">Contact Me</a></li>
-        </ul>
+        <nav class="NavMenu">
+            <ul>
+                <li><a href="../home/home.html">Home</a></li>
+                <li><a href="../blog_categories/blog_categories.html">Blog Categories</a></li>
+                <li><a href="../profile/profile.html">Profile</a></li>
+                <li><a href="../link/link.html">Link</a></li>
+                <li><a href="../contact_me/contact_me.html">Contact Me</a></li>
+            </ul>
+        </nav>
+        <!-- ハンバーガーメニュー部分 -->
+        <div class="Toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div id="my_name">
             <h2 class="last_name">Manato</h2>
             <h2 class="family_name">Kato</h2>
@@ -105,9 +113,9 @@
                     <div class="rubik">
                         <h3>Rubik's Cube</h3>
                         <div class="paragraph">
-                            <p>小学二年生の頃に六面揃えられるようになりました。ここ最近の2年間、一度も触っていませんでしたが、ちゃんと揃えることができました。子どもの頃に習得したものは、大きくなっても忘れにくいのでしょうか。</p>
+                            <p id="p1">小学二年生の頃に六面揃えられるようになりました。ここ最近の2年間、一度も触っていませんでしたが、ちゃんと揃えることができました。子どもの頃に習得したものは、大きくなっても忘れにくいのでしょうか。</p>
                             <h5>目の前のことだけ考える人、先のことまで考える人</h5>
-                            <p id="p2">時々、右の写真のように、上部の一面のみを揃えて、側面の一番上を揃えずに、「一面なら揃えられるよ」と言う人がいます。たしかに、一面はそろっていますが、六面を揃えようとしたとき、そのままでは揃えられませんよね？一面揃えるとは、その連動している側面も揃えることだと、私は思います。物事の先まで考えられる人間になりたいですね。</p>
+                            <p id="p2">時々、写真のように、上部の一面のみを揃えて、側面の一番上を揃えずに、「一面なら揃えられるよ」と言う人がいます。たしかに、一面はそろっていますが、六面を揃えようとしたとき、そのままでは揃えられませんよね？一面揃えるとは、その連動している側面も揃えることだと、私は思います。物事の先まで考えられる人間になりたいですね。</p>
                         </div>
                         <div class="img">
                             <img src="../image/rubik_1.jpg">
@@ -226,7 +234,19 @@
     <footer>
     </footer>
 
+    <script type="text/javascript">
+        $(function() {
+            $('.Toggle').click(function() {
+                $(this).toggleClass('active');
 
+                if ($(this).hasClass('active')) {
+                    $('.NavMenu').addClass('active');　 //クラスを付与
+                } else {
+                    $('.NavMenu').removeClass('active'); //クラスを外す
+                }
+            });
+        });
+    </script>
     <!-- jsファイルの読み込み -->
     <script src="profile.js"></script>
 </body>

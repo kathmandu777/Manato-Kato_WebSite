@@ -1,0 +1,26 @@
+
+/*
+
+
+
+
+スマホ用メディアクエリ　ブレイクポイント　～559px*/
+@media screen and (max-width: 559px) {}
+
+
+/*
+
+
+
+
+タブレット用メディアクエリ　ブレイクポイント560～960px*/
+@media screen and (min-width:600px) and (max-width:959px) {}
+
+
+/*
+
+
+
+
+㍶用メディアクエリ　ブレイクポイント960px~　*/
+@media screen and (min-width: 960px) {}

@@ -6,43 +6,94 @@
 }
 
 /*　mainのCSS　*/
-.content {
-  background-color: #dbeffd;
-  height: 500px;
-  width: 100%;
+/*スマホ用メディアクエリ　ブレイクポイント　～559px*/
+@media screen and (max-width: 559px) {
+  #home {
+    margin: 0;
+    background-color: #dbeffd;
+    width: 100%;
+  }
+  #home .content {
+    margin: 0 auto;
+    width: 96%;
+    overflow: hidden;
+    /*親要素にこれをつけるとmarginの問題が解消*/
+  }
+  #home .content .news {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid;
+  }
+  #home .content .news .news_content {
+    padding-left: 2%;
+    list-style: none;
+  }
+  #home .content .recommended {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid;
+  }
+  #home .content .recommended .recommended_article {
+    padding-left: 2%;
+    list-style: none;
+  }
+  #home .content .access_ranking {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid;
+  }
+  #home .content .access_ranking .access_ranking_article {
+    padding-left: 2%;
+    list-style: none;
+  }
 }
 
-.content .news {
-  float: right;
-  width: 15%;
-  height: 460px;
-  padding: 20px;
-  border-left: 1px solid;
-}
-
-.content .news .news_content {
-  list-style: none;
-}
-
-.content .recommended {
-  padding: 20px;
-  border: 1px solid;
-  width: 75%;
-}
-
-.content .recommended .recommended_article {
-  list-style: none;
-}
-
-.content .access_ranking {
-  margin-top: 20px;
-  padding: 20px;
-  border: 1px solid;
-  width: 75%;
-}
-
-.content .access_ranking .access_ranking_article {
-  width: 80%;
-  list-style: none;
+/*タブレット用メディアクエリ　ブレイクポイント560～960px*/
+/*㍶用メディアクエリ　ブレイクポイント960px~　*/
+@media screen and (min-width: 960px) {
+  #home {
+    background-color: #dbeffd;
+    height: 500px;
+    width: 100%;
+  }
+  #home .content {
+    margin: auto;
+    width: 80%;
+  }
+  #home .content .news {
+    margin-top: 10px;
+    float: right;
+    width: 15%;
+    padding: 20px;
+    border: 1px solid;
+  }
+  #home .content .news .news_content {
+    padding-left: 2%;
+    list-style: none;
+  }
+  #home .content .recommended {
+    margin-top: 10px;
+    float: left;
+    padding: 20px;
+    border: 1px solid;
+    width: 70%;
+  }
+  #home .content .recommended .recommended_article {
+    padding-left: 2%;
+    list-style: none;
+  }
+  #home .content .access_ranking {
+    float: left;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid;
+    width: 70%;
+  }
+  #home .content .access_ranking .access_ranking_article {
+    padding-left: 2%;
+    width: 80%;
+    list-style: none;
+  }
 }
 /*# sourceMappingURL=home.css.map */

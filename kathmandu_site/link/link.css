@@ -1,34 +1,76 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
 }
 
-#link {
-  width: 60%;
-  padding-top: 20px;
-  margin: 20px auto;
+/*
+
+
+
+
+スマホ用メディアクエリ　ブレイクポイント　～559px*/
+@media screen and (max-width: 559px) {
+  #link {
+    width: 96%;
+    padding-top: 20px;
+    margin: 20px auto;
+  }
+  #link h2 {
+    text-align: center;
+    border-bottom: black dashed 2px;
+  }
+  #link #link_content {
+    width: 90%;
+    margin: 15px auto;
+  }
+  #link #link_content ul li {
+    padding-bottom: 10px;
+  }
+  #link #link_content ul li p {
+    padding-left: 2%;
+    padding-top: 5px;
+  }
+  #link #link_content ul li a {
+    font-size: 14px;
+  }
 }
 
-#link h2 {
-  text-align: center;
-  border-bottom: black dashed 2px;
-}
+/*
 
-#link #link_content {
-  width: 90%;
-  margin: 15px auto;
-}
 
-#link #link_content ul li {
-  padding-bottom: 10px;
-}
 
-#link #link_content ul li p {
-  padding-left: 2%;
-  padding-top: 5px;
-}
 
-#link #link_content ul li a {
-  font-size: 14px;
+タブレット用メディアクエリ　ブレイクポイント560～960px*/
+/*
+
+
+
+
+㍶用メディアクエリ　ブレイクポイント960px~　*/
+@media screen and (min-width: 960px) {
+  #link {
+    width: 60%;
+    padding-top: 20px;
+    margin: 20px auto;
+  }
+  #link h2 {
+    text-align: center;
+    border-bottom: black dashed 2px;
+  }
+  #link #link_content {
+    width: 90%;
+    margin: 15px auto;
+  }
+  #link #link_content ul li {
+    padding-bottom: 10px;
+  }
+  #link #link_content ul li p {
+    padding-left: 2%;
+    padding-top: 5px;
+  }
+  #link #link_content ul li a {
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=link.css.map */
