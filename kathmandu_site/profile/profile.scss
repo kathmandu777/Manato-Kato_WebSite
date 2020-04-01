@@ -1,0 +1,521 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        width: 100%;
+        height: 600px;
+        background-image: url("../../image/hex.jpg");
+        border-bottom: 1px solid rgb(171, 169, 169);
+        background-size: cover;
+        position: relative;
+        /*title*/
+        h1 {
+            padding-left: 2%;
+            line-height: 80px;
+            float: left;
+            color: red;
+            font-family: Comic Sans MS;
+        }
+        /*list*/
+        ul {
+            float: right;
+            list-style: none;
+            margin-right: 0 10px 0 0;
+            line-height: 80px;
+            li {
+                display: inline-block;
+                a {
+                    color: black;
+                    font-size: 22px;
+                }
+                &:hover {
+                    transform: rotate(5deg);
+                }
+            }
+        }
+        /*
+        これより上が本来のヘッダー
+        これより下は自己紹介文の名前と写真
+        */
+        #my_name {
+            width: 50%;
+            /*position center*/
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            h2 {
+                font-size: 80px;
+                font-family: 'Sacramento', cursive;
+                color: black;
+            }
+            .family_name {
+                text-align: center;
+            }
+            .last_name {
+                text-align: left;
+            }
+        }
+        #face_image {
+            width: 20%;
+            /*position center*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(80%, -50%);
+        }
+    }
+    /*
+    
+    これより上ヘッダー＆名前
+    これより下プロフィール
+
+    */
+    
+    .profile_content {
+        width: 100%;
+        margin: 0 auto;
+        background-color: white;
+        #profile {
+            width: 40%;
+            text-align: center;
+            margin: 40px auto;
+            position: relative;
+            padding: 0.5em 1.5em;
+            border-top: solid 2px black;
+            border-bottom: solid 2px black;
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                top: -10px;
+                width: 2px;
+                height: -webkit-calc(100% + 20px);
+                height: calc(100% + 20px);
+                background-color: black;
+            }
+            &:before {
+                left: 10px;
+            }
+            &:after {
+                right: 10px;
+            }
+        }
+        /*性別*/
+        #gender {
+            margin: 0 auto;
+            width: 80%;
+            height: 300px;
+            background-image: url("../image/gender_background2.png");
+            background-size: cover;
+            border-radius: 10px;
+            position: relative;
+            .title {
+                position: absolute;
+                top: 20%;
+                left: 5%;
+                font-family: Times New Roman;
+                font-size: 50px;
+            }
+            .ans {
+                position: absolute;
+                top: 45%;
+                left: 45%;
+                font-size: 40px;
+            }
+            p {
+                position: absolute;
+                top: 70%;
+                left: 80%;
+                font-size: 20px;
+            }
+        }
+        /*誕生日*/
+        #birthday {
+            margin: 20px auto;
+            background-image: url("../image/gift.jpg");
+            background-size: cover;
+            border-radius: 10px;
+            width: 80%;
+            height: 400px;
+            position: relative;
+            .title {
+                position: absolute;
+                top: 55%;
+                left: 5%;
+                font-size: 40px;
+                color: white;
+            }
+            .ans {
+                position: absolute;
+                top: 65%;
+                left: 10%;
+                font-size: 40px;
+                color: white;
+            }
+            p {
+                position: absolute;
+                top: 78%;
+                left: 20%;
+                font-size: 20px;
+                color: white;
+            }
+        }
+        /*豊田高専*/
+        #my_school {
+            margin: 10px auto;
+            background-image: url("../image/toyotakosen3.jpg");
+            background-size: cover;
+            border-radius: 10px;
+            width: 80%;
+            height: 500px;
+            position: relative;
+            .title {
+                position: absolute;
+                top: 70%;
+                left: 5%;
+                font-size: 40px;
+            }
+            .ans {
+                position: absolute;
+                top: 80%;
+                left: 10%;
+                font-size: 30px;
+            }
+        }
+        /*夢*/
+        #my_dream {
+            margin: 5px auto;
+            background-image: url("../image/imagination.jpg");
+            background-size: cover;
+            border-radius: 10px;
+            width: 80%;
+            height: 500px;
+            position: relative;
+            .my_dream_content {
+                width: 60%;
+                float: right;
+                .title {
+                    padding: 10% 3% 0 0;
+                    text-align: right;
+                    font-size: 40px;
+                }
+                .ans {
+                    padding: 20% 3% 0 0;
+                    text-align: right;
+                    font-size: 34px;
+                    color: white;
+                }
+            }
+        }
+        /*
+        
+        これより上自己紹介カード風
+        これより下趣味
+        
+        */
+        #my_hobby {
+            margin: 50px auto;
+            .hobby_title {
+                font-size: 36px;
+                text-align: center;
+                color: orange;
+            }
+            .hobby_content {
+                width: 90%;
+                margin: 5px auto;
+                background-color: rgb(255, 230, 206);
+                border: 4px solid orange;
+                border-radius: 3em .8em 3em .7em/.9em 2em .8em 3em;
+                /*レゴ*/
+                #lego {
+                    margin: 20px;
+                    text-align: center;
+                    position: relative;
+                    h3 {
+                        position: absolute;
+                        top: 18%;
+                        left: 18%;
+                        color: red;
+                        font-size: 34px;
+                    }
+                    p {
+                        width: 53%;
+                        position: absolute;
+                        top: 30%;
+                        left: 22%;
+                        font-size: 22px;
+                        text-align: left;
+                    }
+                }
+                /*ロボカップ*/
+                #robocup {
+                    width: 80%;
+                    margin: 50px auto;
+                    background-color: white;
+                    position: relative;
+                    border: solid 2px greenyellow;
+                    border-radius: 3px 0 3px 0;
+                    &:before,
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 10px;
+                        height: 10px;
+                        border: solid 2px greenyellow;
+                        border-radius: 50%;
+                    }
+                    &:after {
+                        top: -12px;
+                        left: -12px;
+                    }
+                    &:before {
+                        bottom: -12px;
+                        right: -12px;
+                    }
+                    h3 {
+                        padding: 10px;
+                        margin: 10px;
+                        width: 20%;
+                        color: #494949;
+                        background: #f4f4f4;
+                        border-left: solid 5px #7db4e6;
+                        border-bottom: solid 3px #d7d7d7;
+                    }
+                    p {
+                        padding-left: 50px;
+                        padding-right: 10px;
+                    }
+                    h5 {
+                        padding-left: 30px;
+                        font-size: 15px;
+                    }
+                    ul {
+                        padding-left: 58px;
+                    }
+                }
+                #table_tennis {
+                    width: 77%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 30px;
+                    position: relative;
+                    border: 1.5vw solid white;
+                    background-color: blue;
+                    ;
+                    &:before {
+                        content: "";
+                        display: block;
+                        padding-top: 55%;
+                        /* 高さを幅の75%に固定 */
+                    }
+                    #line_width {
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        width: 100%;
+                        border-bottom: 4px solid white;
+                    }
+                    #line_height {
+                        position: absolute;
+                        top: -8%;
+                        left: 49%;
+                        height: 116%;
+                        border-right: 8px solid white;
+                    }
+                    h3 {
+                        position: absolute;
+                        top: 2%;
+                        left: 2%;
+                        bottom: 0;
+                        right: 0;
+                        color: orange;
+                        font-size: 34px;
+                        ;
+                    }
+                    p {
+                        position: absolute;
+                        top: 10%;
+                        left: 5%;
+                        bottom: 0;
+                        right: 0;
+                        padding: 10px;
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+        /*
+
+        これより上趣味
+        これより下スキル
+
+        */
+        #my_skill {
+            position: relative;
+            margin: 2em auto;
+            padding: 1.2em;
+            width: 90%;
+            border: 2px solid #ff9ece;
+            color: #555555;
+            background-color: #fff;
+            box-shadow: 2px 2px 1px #c7c7c7;
+            border-radius: 8px;
+            .skill_title {
+                position: absolute;
+                top: -0.6em;
+                left: 41%;
+                padding: 0 9px;
+                line-height: 1;
+                font-size: 40px;
+                background: #FFF;
+                color: #95ccff;
+                font-weight: bold;
+            }
+            .skill_content {
+                .rubik {
+                    width: 80%;
+                    margin: 50px auto;
+                    position: relative;
+                    background: #efefef;
+                    overflow: hidden;
+                    &:before,
+                    &:after {
+                        position: absolute;
+                        top: 0;
+                        content: '';
+                        width: 10px;
+                        height: 100%;
+                        display: inline-block;
+                        box-sizing: border-box;
+                    }
+                    &:before {
+                        border-left: dotted 2px #15adc1;
+                        border-top: dotted 2px #15adc1;
+                        border-bottom: dotted 2px #15adc1;
+                        left: 0;
+                    }
+                    &:after {
+                        border-top: dotted 2px #15adc1;
+                        border-right: dotted 2px #15adc1;
+                        border-bottom: dotted 2px #15adc1;
+                        right: 0;
+                    }
+                    h3 {
+                        width: 17%;
+                        position: relative;
+                        padding-left: 25px;
+                        margin-left: 20px;
+                        color: rgb(211, 211, 79);
+                        &:before {
+                            position: absolute;
+                            content: '';
+                            bottom: -3px;
+                            left: 0;
+                            width: 0;
+                            height: 0;
+                            border: none;
+                            border-left: solid 15px transparent;
+                            border-bottom: solid 15px rgb(119, 195, 223);
+                        }
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            bottom: -3px;
+                            left: 10px;
+                            width: 100%;
+                            border-bottom: solid 3px rgb(119, 195, 223);
+                        }
+                    }
+                    .paragraph {
+                        padding: 20px 20px 20px 50px;
+                        width: 65%;
+                        float: left;
+                        h5 {
+                            padding: 15px 0 5px 0;
+                            font-size: 16px;
+                        }
+                        #p2 {
+                            padding-left: 3%;
+                        }
+                    }
+                    img {
+                        width: 25%;
+                        float: right;
+                    }
+                    .img {
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+        /*
+        スキル
+        プログラミング言語
+        */
+        #programming_languages {
+            width: 90%;
+            margin: 30px auto;
+            background: radial-gradient(800px, #e3f2fd, #64b5f6);
+            border-radius: 7px;
+            .title {
+                padding: 20px;
+                font-size: 30px;
+            }
+            .programming_languages_content {
+                padding: 10px;
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    li {
+                        width: 46%;
+                        margin: 2%;
+                        list-style: none;
+                        h3 {
+                            font-size: 26px;
+                            width: 50%;
+                            margin: 0 auto;
+                            color: yellow;
+                            padding: 10px 0 0 0;
+                            text-align: center;
+                        }
+                        p {
+                            width: 100%;
+                            text-align: center;
+                        }
+                        .img {
+                            text-align: center;
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #advantages_disadvantages {
+            width: 90%;
+            margin: 30px auto;
+            background: radial-gradient(800px, #5731ff, #fca9ff);
+            border-radius: 7px;
+            .title {
+                padding: 20px;
+                font-size: 30px;
+            }
+        }
+        #my_history {
+            width: 90%;
+            margin: 30px auto;
+            background: radial-gradient(800px, #bbc0a1, #fff89c);
+            border-radius: 7px;
+            .title {
+                padding: 20px;
+                font-size: 30px;
+            }
+        }
+    }

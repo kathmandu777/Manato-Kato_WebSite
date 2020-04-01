@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>KathmanduのWEBサイト</title>
+    <!-- CSSファイルの読み込み -->
+    <link rel="stylesheet" href="profile.css">
+    <!--<link rel="stylesheet" href="../common_file/header/header.css" type="text/css">-->
+    <link rel="stylesheet" href="../common_file/footer/footer.css">
+    <!-- jQueryライブラリの読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <h1>Manato's Diary</h1>
+        <ul>
+            <li><a href="../home/home.html">Home</a></li>
+            <li><a href="../blog_categories/blog_categories.html">Blog Categories</a></li>
+            <li><a href="../profile/profile.html">Profile</a></li>
+            <li><a href="../link/link.html">Link</a></li>
+            <li><a href="../contact_me/contact_me.html">Contact Me</a></li>
+        </ul>
+        <div id="my_name">
+            <h2 class="last_name">Manato</h2>
+            <h2 class="family_name">Kato</h2>
+        </div>
+        <p id="face_image">時が来たら写真を載せます</p>
+    </header>
+
+    <main>
+        <div class="profile_content">
+            <h2 id="profile">My Profile</h2>
+            <!--
+            <div id="name">
+                <h3>My Name</h3>
+                <h3>Manato Kato</h3>
+                <h3>加藤愛斗</h3>
+            </div>
+            -->
+            <div id="gender">
+                <h3 class="title">Gender</h3>
+                <h3 class="ans">man</h3>
+                <p>来世も男で。</p>
+            </div>
+
+            <div id="birthday">
+                <h3 class="title">Birth-day</h3>
+                <h3 class="ans">2003/07/02</h3>
+                <p>誕生日にはシュークリームがたくさんほしい</p>
+            </div>
+
+            <div id="my_school">
+                <h3 class="title">My School</h3>
+                <h3 class="ans">-National Institute of Technology ,Toyota College</h3>
+            </div>
+
+            <div id="my_dream">
+                <div class="my_dream_content">
+                    <h3 class="title">My Dream</h3>
+                    <h3 class="ans">Making big revolution<br> in the world <br>using technology and ideas.</h3>
+                </div>
+            </div>
+
+            <!-- 趣味 -->
+            <div id="my_hobby">
+                <h3 class="hobby_title">My Hobby</h3>
+
+                <div class="hobby_content">
+                    <div id="lego">
+                        <img src="../image/lego-3610098_1920.jpg" width="80%">
+                        <h3>Lego</h3>
+                        <p>小学校の頃からたくさん遊んでおり、家にはたくさんのレゴブロックがあります。今までに作った作品には、メダルゲームやUFOキャッチャーなどがあります。今は、ラズベリーパイや3Dプリンター、Unityを用いてメダルゲームの改良版を作成中です。</p>
+                    </div>
+                    <div id="robocup">
+                        <h3>Robocup</h3>
+                        <p>小学五年生から名古屋市科学館で取り組んできた。ロボカップがきっかけで、現在在籍中の学校に入学することとなった。現在は、ラズベリーパイを用いて、人工知能を搭載したロボットの製作に取り組んでいます。目標は壊れずしっかりと全試合出場できるロボットの作成です。</p>
+                        <h5>実績</h5>
+                        <ul>
+                            <li>ロボカップジュニアジャパンサッカーチャレンジ全国大会 3 位（2017）</li>
+                            <li>ロボカップジュニアジャパンサッカーチャレンジ全国大会出場（2018）</li>
+                        </ul>
+                    </div>
+                    <div id="table_tennis">
+                        <div id="line_width"></div>
+                        <div id="line_height"></div>
+                        <div id="table_tennis_aspect">
+                            <h3>table tennis</h3>
+                            <p>中学校・現在ともに卓球部所属ではありませんが、家に卓球台があるので、暇な時にやっています。実力は全くありませんが、サーブは少しだけ得意です。<br>枠は卓球台を意識してデザインしてみました。真ん中のラインが少しずれていたりなど、CSSの技術がまだまだ未熟です。もっと頑張ります。</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- スキル -->
+            <div id="my_skill">
+                <h3 class="skill_title">My Skills</h3>
+
+                <div class="skill_content">
+                    <div class="rubik">
+                        <h3>Rubik's Cube</h3>
+                        <div class="paragraph">
+                            <p>小学二年生の頃に六面揃えられるようになりました。ここ最近の2年間、一度も触っていませんでしたが、ちゃんと揃えることができました。子どもの頃に習得したものは、大きくなっても忘れにくいのでしょうか。</p>
+                            <h5>目の前のことだけ考える人、先のことまで考える人</h5>
+                            <p id="p2">時々、右の写真のように、上部の一面のみを揃えて、側面の一番上を揃えずに、「一面なら揃えられるよ」と言う人がいます。たしかに、一面はそろっていますが、六面を揃えようとしたとき、そのままでは揃えられませんよね？一面揃えるとは、その連動している側面も揃えることだと、私は思います。物事の先まで考えられる人間になりたいですね。</p>
+                        </div>
+                        <div class="img">
+                            <img src="../image/rubik_1.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- プログラミング言語 -->
+            <div id="programming_languages">
+                <h3 class="title">Programming Languages(& Framework)</h3>
+
+                <div class="programming_languages_content">
+                    <ul>
+                        <li id="html_css">
+                            <h3>HTML&CSS</h3>
+                            <div class="img">
+                                <img src="../image/html_css.jpg">
+                            </div>
+                            <p>このWEB製作を通して練習中です。<br>厳密にはCSSではなくSassを使っています。</p>
+                        </li>
+
+                        <li id="python">
+                            <h3>Python</h3>
+                            <div class="img">
+                                <img src="../image/python.png">
+                            </div>
+                            <p>高専で半年間学習し、現在はAtCoderにて使用しています。<br>最初はインデントによるブロック管理が苦手でしたが、今は慣れました。
+                            </p>
+                        </li>
+
+                        <li id="c">
+                            <h3>C++</h3>
+                            <div class="img">
+                                <img src="../image/c.jpg">
+                            </div>
+                            <p>最初に触った言語が、Arduino言語（C/C++系）だったため、非常に見慣れています。最初は、AtCoderで使用していましたが、Pythonのほうが書きやすかったので、Pythonに転向しました。</p>
+                        </li>
+
+                        <li id="java">
+                            <h3>Java</h3>
+                            <p>Progateで学習したきりで、一度も使っていません。これから、AtCoderを用いて練習していきたいと思っています。</p>
+                        </li>
+
+                        <li id="javascript">
+                            <h3>JavaScript</h3>
+                            <div class="img">
+                                <img src="../image/javascript.jpg">
+                            </div>
+                            <p></p>
+                        </li>
+
+                        <li id="jquery">
+                            <h3>jQuery</h3>
+                            <p></p>
+                        </li>
+
+                        <li id="react">
+                            <h3>React</h3>
+                            <p></p>
+                        </li>
+
+                        <li id="php">
+                            <h3>PHP</h3>
+                            <p>Progateで学習したきりで、一度も使っていません。このサイト作成で使おうと試みましたが、ファイル拡張子が、.phpになることが嫌だっためやめました。</p>
+                        </li>
+
+                        <li id="sql">
+                            <h3>SQL</h3>
+                            <p></p>
+                        </li>
+
+                        <li id="go">
+                            <h3>Go</h3>
+                            <p></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 長所　短所 -->
+            <div id="advantages_disadvantages">
+                <h3 class="title">Advantages and Disadvantages</h3>
+                <div id="advantages_disadvantages_content">
+                    <div id="advantages">
+                        <div class="making">
+                            <h3>製作中</h3>
+                            <p>もうしばらくお待ちください。</p>
+                        </div>
+                    </div>
+
+                    <div id="disadvantages">
+                        <div class="making">
+                            <h3>製作中</h3>
+                            <p>もうしばらくお待ちください。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 経歴 -->
+            <div id="my_history">
+                <h3 class="title">My History</h3>
+                <div id="history_content">
+                    <div class="making">
+                        <h3>製作中</h3>
+                        <p>もうしばらくお待ちください。</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <footer>
+    </footer>
+
+
+    <!-- jsファイルの読み込み -->
+    <script src="profile.js"></script>
+</body>
+
+</html>

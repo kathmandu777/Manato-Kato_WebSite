@@ -1,0 +1,43 @@
+/*デフォルトで入る余計な余白を取り除く*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*　mainのCSS　*/
+
+.content {
+    background-color: rgb(219, 239, 253);
+    height: 500px;
+    width: 100%;
+    .news {
+        float: right;
+        width: 15%;
+        height: 460px;
+        padding: 20px;
+        border-left: 1px solid;
+        .news_content {
+            list-style: none;
+        }
+    }
+    .recommended {
+        padding: 20px;
+        border: 1px solid;
+        width: 75%;
+        .recommended_article {
+            list-style: none;
+        }
+    }
+    .access_ranking {
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid;
+        width: 75%;
+        .access_ranking_article {
+            width: 80%;
+            list-style: none;
+        }
+    }
+}

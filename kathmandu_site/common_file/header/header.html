@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>header_common_part</title>
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <!-- CSSファイルの読み込み -->
+    <link rel="stylesheet" href="header.css" type="text/css">
+    <!-- jQueryライブラリの読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <h1>Manato's Diary</h1>
+        <ul>
+            <!--リンクするページから見て相対パスを指定-->
+            <li><a href="../home/home.html">Home</a></li>
+            <li><a href="../blog_categories/blog_categories.html">Blog Categories</a></li>
+            <li><a href="../profile/profile.html">Profile</a></li>
+            <li><a href="../link/link.html">Link</a></li>
+            <li><a href="../contact_me/contact_me.html">Contact Me</a></li>
+        </ul>
+        <div id="quote">
+            <h3>Done is better than perfect.</h3>
+            <p>-by Mark Zuckerberg.</p>
+        </div>
+    </header>
+
+    <!-- jsファイルの読み込み -->
+    <script type="text/javascript" src="header.js"></script>
+</body>
+
+</html>

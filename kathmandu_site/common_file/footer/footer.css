@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/*デフォルトで入る余計な余白を取り除く*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*footerのCSS*/
+#footer {
+  width: 100%;
+  height: 90px;
+  background-color: #174a5c;
+  color: white;
+  text-align: center;
+  padding: 10px 0 0 0;
+}
+
+#footer li a {
+  color: white;
+}
+
+#footer #copy_right {
+  padding-bottom: 5px;
+}
+
+#footer #notice {
+  font-size: 12px;
+}
+
+ul.footer-menu li {
+  display: inline;
+}
+/*# sourceMappingURL=footer.css.map */

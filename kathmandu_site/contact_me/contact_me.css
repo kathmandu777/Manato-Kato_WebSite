@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#contact {
+  width: 60%;
+  padding-top: 20px;
+  margin: 20px auto;
+}
+
+#contact h2 {
+  text-align: center;
+  border-bottom: black dashed 2px;
+}
+
+#contact #twitter {
+  text-align: center;
+  padding: 20px;
+}
+
+#contact #gmail {
+  text-align: center;
+  padding: 20px;
+}
+/*# sourceMappingURL=contact_me.css.map */

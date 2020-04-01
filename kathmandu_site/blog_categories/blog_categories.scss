@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#blog_category {
+    width: 60%;
+    margin: 30px auto;
+    #blog_category_content {
+        padding-top: 20px;
+        padding-left: 4%;
+        ul>li {
+            padding-bottom: 15px;
+            ol {
+                padding-left: 3%;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/*デフォルトで入る余計な余白を取り除く*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*　mainのCSS　*/
+.content {
+  background-color: #dbeffd;
+  height: 500px;
+  width: 100%;
+}
+
+.content .news {
+  float: right;
+  width: 15%;
+  height: 460px;
+  padding: 20px;
+  border-left: 1px solid;
+}
+
+.content .news .news_content {
+  list-style: none;
+}
+
+.content .recommended {
+  padding: 20px;
+  border: 1px solid;
+  width: 75%;
+}
+
+.content .recommended .recommended_article {
+  list-style: none;
+}
+
+.content .access_ranking {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid;
+  width: 75%;
+}
+
+.content .access_ranking .access_ranking_article {
+  width: 80%;
+  list-style: none;
+}
+/*# sourceMappingURL=home.css.map */

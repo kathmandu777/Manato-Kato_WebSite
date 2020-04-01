@@ -1,0 +1,22 @@
+ * {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ #contact {
+     width: 60%;
+     padding-top: 20px;
+     margin: 20px auto;
+     h2 {
+         text-align: center;
+         border-bottom: black dashed 2px;
+     }
+     #twitter {
+         text-align: center;
+         padding: 20px;
+     }
+     #gmail {
+         text-align: center;
+         padding: 20px;
+     }
+ }
