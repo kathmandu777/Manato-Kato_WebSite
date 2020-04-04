@@ -38,6 +38,7 @@
   }
   #main_content #article #recommended_entrance_exam .content {
     padding-left: 3%;
+    padding-right: 2%;
     font-size: 12px;
   }
   #main_content #article #advice {
@@ -59,6 +60,7 @@
   }
   #main_content #article #advice #tension .content {
     padding-left: 4%;
+    padding-right: 2%;
     font-size: 12px;
   }
   #main_content #article #advice #dear_low_score {
@@ -69,6 +71,7 @@
   }
   #main_content #article #advice #dear_low_score .content {
     padding-left: 4%;
+    padding-right: 2%;
     font-size: 12px;
   }
   #main_content #article #closing .caption {
@@ -79,6 +82,7 @@
   }
   #main_content #article #closing .content {
     padding-left: 3%;
+    padding-right: 2%;
     font-size: 12px;
   }
 }
