@@ -1,0 +1,159 @@
+ * {
+     margin: 0;
+     padding: 0;
+ }
+ /* スマホ用メディアクエリ ブレイクポイント ～559px*/
+ 
+ @media screen and (max-width: 559px) {
+     #main_content {
+         margin: 50px auto;
+         overflow: hidden;
+         /*親要素にこれをつけるとmarginの問題が解消*/
+         #title {
+             width: 100%;
+             padding-left: 1%;
+             font-size: 20px;
+             color: #494949;
+             /*文字色*/
+             background: #fffaf4;
+             /*背景色*/
+             border-left: solid 5px #ffaf58;
+             /*左線（実線 太さ 色）*/
+         }
+         #article {
+             padding-left: 2%;
+             padding-top: 10px;
+             #recommended_entrance_exam {
+                 padding-bottom: 20px;
+                 .caption {
+                     font-size: 16px;
+                     margin-bottom: 8px;
+                     background: linear-gradient(transparent 70%, #a7d6ff 70%);
+                     width: 170px;
+                 }
+                 .content {
+                     padding-left: 3%;
+                     font-size: 12px;
+                 }
+             }
+             #advice {
+                 padding-bottom: 20px;
+                 .caption {
+                     font-size: 16px;
+                     margin-bottom: 8px;
+                     width: 170px;
+                     background: linear-gradient(transparent 70%, #a7d6ff 70%);
+                 }
+                 #tension {
+                     padding-left: 1%;
+                     padding-bottom: 10px;
+                     .sub_caption {
+                         font-size: 14px;
+                     }
+                     .content {
+                         padding-left: 4%;
+                         font-size: 12px;
+                     }
+                 }
+                 #dear_low_score {
+                     padding-left: 1%;
+                     .sub_caption {
+                         font-size: 14px;
+                     }
+                     .content {
+                         padding-left: 4%;
+                         font-size: 12px;
+                     }
+                 }
+             }
+             #closing {
+                 .caption {
+                     margin-bottom: 8px;
+                     width: 170px;
+                     background: linear-gradient(transparent 70%, #a7d6ff 70%);
+                 }
+                 .content {
+                     padding-left: 3%;
+                     font-size: 12px;
+                 }
+             }
+         }
+     }
+ }
+ /*
+
+
+
+
+タブレット用メディアクエリ　ブレイクポイント560～960px*/
+ 
+ @media screen and (min-width:600px) and (max-width:959px) {}
+ /*
+
+
+
+
+㍶用メディアクエリ　ブレイクポイント960px~　*/
+ 
+ @media screen and (min-width: 960px) {
+     #main_content {
+         width: 80%;
+         margin: 50px auto;
+         #title {
+             width: 400px;
+             padding-left: 1%;
+             color: #494949;
+             /*文字色*/
+             background: #fffaf4;
+             /*背景色*/
+             border-left: solid 5px #ffaf58;
+             /*左線（実線 太さ 色）*/
+         }
+         #article {
+             padding-left: 2%;
+             padding-top: 10px;
+             #recommended_entrance_exam {
+                 padding-bottom: 20px;
+                 .caption {
+                     margin-bottom: 8px;
+                     background: linear-gradient(transparent 70%, #a7d6ff 70%);
+                     width: 170px;
+                 }
+                 .content {
+                     padding-left: 2%;
+                 }
+             }
+             #advice {
+                 padding-bottom: 20px;
+                 .caption {
+                     margin-bottom: 8px;
+                     width: 170px;
+                     background: linear-gradient(transparent 70%, #a7d6ff 70%);
+                 }
+                 #tension {
+                     padding-left: 1%;
+                     padding-bottom: 10px;
+                     .content {
+                         padding-left: 2%;
+                     }
+                 }
+                 #dear_low_score {
+                     padding-left: 1%;
+                     .content {
+                         padding-left: 2%;
+                     }
+                 }
+             }
+             #closing {
+                 .caption {
+                     margin-bottom: 8px;
+                     width: 170px;
+                     background: linear-gradient(transparent 70%, #a7d6ff 70%);
+                 }
+                 .content {
+                     padding-left: 2%;
+                 }
+             }
+         }
+     }
+ }

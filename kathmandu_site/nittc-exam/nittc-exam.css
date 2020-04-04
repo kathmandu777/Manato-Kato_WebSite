@@ -1,0 +1,161 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* スマホ用メディアクエリ ブレイクポイント ～559px*/
+@media screen and (max-width: 559px) {
+  #main_content {
+    margin: 50px auto;
+    overflow: hidden;
+    /*親要素にこれをつけるとmarginの問題が解消*/
+  }
+  #main_content #title {
+    width: 100%;
+    padding-left: 1%;
+    font-size: 20px;
+    color: #494949;
+    /*文字色*/
+    background: #fffaf4;
+    /*背景色*/
+    border-left: solid 5px #ffaf58;
+    /*左線（実線 太さ 色）*/
+  }
+  #main_content #article {
+    padding-left: 2%;
+    padding-top: 10px;
+  }
+  #main_content #article #recommended_entrance_exam {
+    padding-bottom: 20px;
+  }
+  #main_content #article #recommended_entrance_exam .caption {
+    font-size: 16px;
+    margin-bottom: 8px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, #a7d6ff));
+    background: linear-gradient(transparent 70%, #a7d6ff 70%);
+    width: 170px;
+  }
+  #main_content #article #recommended_entrance_exam .content {
+    padding-left: 3%;
+    font-size: 12px;
+  }
+  #main_content #article #advice {
+    padding-bottom: 20px;
+  }
+  #main_content #article #advice .caption {
+    font-size: 16px;
+    margin-bottom: 8px;
+    width: 170px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, #a7d6ff));
+    background: linear-gradient(transparent 70%, #a7d6ff 70%);
+  }
+  #main_content #article #advice #tension {
+    padding-left: 1%;
+    padding-bottom: 10px;
+  }
+  #main_content #article #advice #tension .sub_caption {
+    font-size: 14px;
+  }
+  #main_content #article #advice #tension .content {
+    padding-left: 4%;
+    font-size: 12px;
+  }
+  #main_content #article #advice #dear_low_score {
+    padding-left: 1%;
+  }
+  #main_content #article #advice #dear_low_score .sub_caption {
+    font-size: 14px;
+  }
+  #main_content #article #advice #dear_low_score .content {
+    padding-left: 4%;
+    font-size: 12px;
+  }
+  #main_content #article #closing .caption {
+    margin-bottom: 8px;
+    width: 170px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, #a7d6ff));
+    background: linear-gradient(transparent 70%, #a7d6ff 70%);
+  }
+  #main_content #article #closing .content {
+    padding-left: 3%;
+    font-size: 12px;
+  }
+}
+
+/*
+
+
+
+
+タブレット用メディアクエリ　ブレイクポイント560～960px*/
+/*
+
+
+
+
+㍶用メディアクエリ　ブレイクポイント960px~　*/
+@media screen and (min-width: 960px) {
+  #main_content {
+    width: 80%;
+    margin: 50px auto;
+  }
+  #main_content #title {
+    width: 400px;
+    padding-left: 1%;
+    color: #494949;
+    /*文字色*/
+    background: #fffaf4;
+    /*背景色*/
+    border-left: solid 5px #ffaf58;
+    /*左線（実線 太さ 色）*/
+  }
+  #main_content #article {
+    padding-left: 2%;
+    padding-top: 10px;
+  }
+  #main_content #article #recommended_entrance_exam {
+    padding-bottom: 20px;
+  }
+  #main_content #article #recommended_entrance_exam .caption {
+    margin-bottom: 8px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, #a7d6ff));
+    background: linear-gradient(transparent 70%, #a7d6ff 70%);
+    width: 170px;
+  }
+  #main_content #article #recommended_entrance_exam .content {
+    padding-left: 2%;
+  }
+  #main_content #article #advice {
+    padding-bottom: 20px;
+  }
+  #main_content #article #advice .caption {
+    margin-bottom: 8px;
+    width: 170px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, #a7d6ff));
+    background: linear-gradient(transparent 70%, #a7d6ff 70%);
+  }
+  #main_content #article #advice #tension {
+    padding-left: 1%;
+    padding-bottom: 10px;
+  }
+  #main_content #article #advice #tension .content {
+    padding-left: 2%;
+  }
+  #main_content #article #advice #dear_low_score {
+    padding-left: 1%;
+  }
+  #main_content #article #advice #dear_low_score .content {
+    padding-left: 2%;
+  }
+  #main_content #article #closing .caption {
+    margin-bottom: 8px;
+    width: 170px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, #a7d6ff));
+    background: linear-gradient(transparent 70%, #a7d6ff 70%);
+  }
+  #main_content #article #closing .content {
+    padding-left: 2%;
+  }
+}
+/*# sourceMappingURL=nittc-exam.css.map */
