@@ -26,7 +26,6 @@
   }
   #home .content .news .news_content {
     padding-left: 2%;
-    list-style: none;
   }
   #home .content .recommended {
     margin-top: 10px;
@@ -64,13 +63,12 @@
   #home .content .news {
     margin-top: 10px;
     float: right;
-    width: 15%;
+    width: 20%;
     padding: 20px;
     border: 1px solid;
   }
   #home .content .news .news_content {
-    padding-left: 2%;
-    list-style: none;
+    padding-left: 10%;
   }
   #home .content .recommended {
     margin-top: 10px;
