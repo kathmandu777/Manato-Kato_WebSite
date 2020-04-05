@@ -25,7 +25,7 @@
     border: 1px solid;
   }
   #home .content .news .news_content {
-    padding-left: 2%;
+    padding-left: 3%;
   }
   #home .content .recommended {
     margin-top: 10px;
@@ -75,7 +75,7 @@
     float: left;
     padding: 20px;
     border: 1px solid;
-    width: 70%;
+    width: 65%;
   }
   #home .content .recommended .recommended_article {
     padding-left: 2%;
@@ -86,7 +86,7 @@
     margin-top: 20px;
     padding: 20px;
     border: 1px solid;
-    width: 70%;
+    width: 65%;
   }
   #home .content .access_ranking .access_ranking_article {
     padding-left: 2%;

@@ -1,0 +1,173 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+
+
+
+
+スマホ用メディアクエリ　ブレイクポイント　～559px*/
+@media screen and (max-width: 559px) {
+  #main_content {
+    width: 98%;
+    margin: 20px auto;
+  }
+  #main_content #title {
+    font-size: 22px;
+    padding-left: 1%;
+    color: #494949;
+    /*文字色*/
+    background: #fffaf4;
+    /*背景色*/
+    border-left: solid 5px #ffaf58;
+    /*左線（実線 太さ 色）*/
+    margin-bottom: 20px;
+  }
+  #main_content #which_cheaper {
+    padding-left: 2%;
+  }
+  #main_content #which_cheaper .caption {
+    margin-bottom: 8px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, #f8f554));
+    background: linear-gradient(transparent 70%, #f8f554 70%);
+  }
+  #main_content #which_cheaper .query {
+    padding-left: 2%;
+    padding-bottom: 15px;
+  }
+  #main_content #which_cheaper .query .btn {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    margin-left: 1%;
+    margin-bottom: 10px;
+  }
+  #main_content #which_cheaper .query .btn:hover {
+    background: #67c5ff;
+    color: white;
+    cursor: pointer;
+  }
+  #main_content #which_cheaper .query .choice_ans {
+    display: none;
+    padding-left: 2%;
+    padding-bottom: 5px;
+  }
+  #main_content #which_cheaper .query .choice_ans h5 {
+    font-size: 18px;
+  }
+  #main_content #which_cheaper .query .explanation {
+    display: none;
+    padding-left: 2%;
+  }
+  #main_content #which_cheaper .query .explanation h5 {
+    font-size: 16px;
+  }
+  #main_content #which_cheaper .query .explanation p {
+    padding-left: 2%;
+  }
+  #main_content #good_consumer .caption {
+    margin-bottom: 8px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, #f8f554));
+    background: linear-gradient(transparent 70%, #f8f554 70%);
+  }
+  #main_content #good_consumer p {
+    padding-left: 2%;
+  }
+}
+
+/*
+
+
+
+
+タブレット用メディアクエリ　ブレイクポイント560～960px*/
+/*
+
+
+
+
+㍶用メディアクエリ　ブレイクポイント960px~　*/
+@media screen and (min-width: 960px) {
+  #main_content {
+    width: 80%;
+    margin: 20px auto;
+  }
+  #main_content #title {
+    font-size: 40px;
+    width: 600px;
+    padding-left: 1%;
+    color: #494949;
+    /*文字色*/
+    background: #fffaf4;
+    /*背景色*/
+    border-left: solid 5px #ffaf58;
+    /*左線（実線 太さ 色）*/
+    margin-bottom: 20px;
+  }
+  #main_content #which_cheaper {
+    padding-left: 2%;
+  }
+  #main_content #which_cheaper .caption {
+    margin-bottom: 8px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, #f8f554));
+    background: linear-gradient(transparent 70%, #f8f554 70%);
+    width: 300px;
+  }
+  #main_content #which_cheaper .query {
+    padding-left: 2%;
+    padding-bottom: 15px;
+  }
+  #main_content #which_cheaper .query .btn {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    margin-left: 1%;
+    margin-bottom: 10px;
+  }
+  #main_content #which_cheaper .query .btn:hover {
+    background: #67c5ff;
+    color: white;
+    cursor: pointer;
+  }
+  #main_content #which_cheaper .query .choice_ans {
+    display: none;
+    padding-left: 2%;
+    padding-bottom: 5px;
+  }
+  #main_content #which_cheaper .query .choice_ans h5 {
+    font-size: 18px;
+  }
+  #main_content #which_cheaper .query .explanation {
+    display: none;
+    padding-left: 2%;
+  }
+  #main_content #which_cheaper .query .explanation h5 {
+    font-size: 16px;
+  }
+  #main_content #which_cheaper .query .explanation p {
+    padding-left: 2%;
+  }
+  #main_content #good_consumer .caption {
+    margin-bottom: 8px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, #f8f554));
+    background: linear-gradient(transparent 70%, #f8f554 70%);
+    width: 300px;
+  }
+  #main_content #good_consumer p {
+    padding-left: 2%;
+  }
+}
+/*# sourceMappingURL=price1.css.map */

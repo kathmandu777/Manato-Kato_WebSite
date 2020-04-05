@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>KathmanduのWEBサイト</title>
+    <!-- CSSファイルの読み込み -->
+    <link rel="stylesheet" href="price1.css">
+    <link rel="stylesheet" href="../common_file/header/header.css">
+    <link rel="stylesheet" href="../common_file/footer/footer.css">
+    <!-- jQueryライブラリの読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+
+    <header>
+    </header>
+
+
+    <main>
+        <div id="main_content">
+            <h2 id="title">値段の計算に強くなろう！</h2>
+            <div id="which_cheaper">
+                <h3 class="caption">どちらのお店が安い？</h3>
+                <div class="query1 query">
+                    <h4>Q1. 3000円の商品があります。</h4>
+                    <div class="btn btn1">A店は、10％引きの値段からさらに200円引きになります。</div>
+                    <div class="btn btn2">B店は、10％引きのさらに5％引きになります。</div>
+                    <div class="choice_ans">
+                        <h5 class="choice">選択した解答</h5>
+                        <h5 class="ans">正解不正解</h5>
+                    </div>
+                    <div class="explanation">
+                        <h5>【解説】</h5>
+                        <p>A店の場合は、3000円の10％引き＝3000×0.9＝2700。その200円引きなので、2700-200＝2500円。</p>
+                        <p>B店の場合は、3000円の10％引き＝3000×0.9＝2700。その5％引きなので、2700×0.95＝2565円。暗算をする場合は、2700円の10％が270円なので、5％はその半分の135円と考えると早いですね。</p>
+                        <p><strong>よって、A店のほうが安いです。</strong></p>
+                    </div>
+                </div>
+
+                <div class="query2 query">
+                    <h4>Q2. 5000円の商品があります。</h4>
+                    <div class="btn btn1">A店は、20％引きの値段からさらに500円引きになります。</div>
+                    <div class="btn btn2">B店は、10％引きのさらに20％引きになります。</div>
+                    <div class="choice_ans">
+                        <h5 class="choice">選択した解答</h5>
+                        <h5 class="ans">正解不正解</h5>
+                    </div>
+                    <div class="explanation">
+                        <h5>【解説】</h5>
+                        <p>A店の場合は、5000円の20％引き＝5000×0.8＝4000。その500円引きなので、4000-500＝3500円。</p>
+                        <p>B店の場合は、5000円の10％引き＝5000×0.9＝4500。その20％引きなので、4500×0.8＝3600円。</p>
+                        <p><strong>よって、A店のほうが安いです。</strong></p>
+                    </div>
+                </div>
+
+                <div class="query3 query">
+                    <h4>Q3. 5000円の商品があります。</h4>
+                    <div class="btn btn1">A店(ネット通販)は、30％引きになります。ただし、送料が800円かかります。（送料は値引対象外です）</div>
+                    <div class="btn btn2">B店は、15％引きになります。</div>
+                    <div class="choice_ans">
+                        <h5 class="choice">選択した解答</h5>
+                        <h5 class="ans">正解不正解</h5>
+                    </div>
+                    <div class="explanation">
+                        <h5>【解説】</h5>
+                        <p>A店の場合は、5000円の30％引き＝5000×0.7＝3500。送料が800円なので、3500+800=4300円。</p>
+                        <p>B店の場合は、5000円の15％引き＝5000×0.85＝4250円。</p>
+                        <p><strong>よって、B店のほうが安いです。</strong>一見、ネット通販のほうが、割引率が大きく安くなるように見えますが違いますね。</p>
+                    </div>
+                </div>
+
+
+                <div id="good_consumer">
+                    <h3 class="caption">賢い消費者</h3>
+                    <p>より賢い消費者となるためには、お金の計算能力は必須のスキルです。電卓をたたくのもよいですが、やはり、自分の頭で計算するほうが簡潔でしょう。目先の数字に騙されず、自分の頭でよく考え、他社と比較をしてから買い物をしましょう。</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+    </footer>
+
+
+    <!-- jsファイルの読み込み -->
+    <script src="price1.js"></script>
+</body>
+
+</html>
