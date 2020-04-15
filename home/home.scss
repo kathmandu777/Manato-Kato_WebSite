@@ -1,0 +1,106 @@
+/*デフォルトで入る余計な余白を取り除く*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*　mainのCSS　*/
+
+
+/*スマホ用メディアクエリ　ブレイクポイント　～559px*/
+
+@media screen and (max-width: 559px) {
+    #home {
+        margin: 0;
+        background-color: rgb(219, 239, 253);
+        width: 100%;
+        .content {
+            margin: 0 auto;
+            width: 96%;
+            overflow: hidden;
+            /*親要素にこれをつけるとmarginの問題が解消*/
+            .news {
+                margin-top: 10px;
+                padding: 10px;
+                border: 1px solid;
+                .news_content {
+                    padding-left: 3%;
+                }
+            }
+            .recommended {
+                margin-top: 10px;
+                padding: 10px;
+                border: 1px solid;
+                .recommended_article {
+                    padding-left: 2%;
+                    list-style: none;
+                }
+            }
+            .access_ranking {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding: 10px;
+                border: 1px solid;
+                .access_ranking_article {
+                    padding-left: 2%;
+                    list-style: none;
+                }
+            }
+        }
+    }
+}
+
+
+/*タブレット用メディアクエリ　ブレイクポイント560～960px*/
+
+@media screen and (min-width:560px) and (max-width:959px) {}
+
+
+/*㍶用メディアクエリ　ブレイクポイント960px~　*/
+
+@media screen and (min-width: 960px) {
+    #home {
+        background-color: rgb(219, 239, 253);
+        height: 500px;
+        width: 100%;
+        .content {
+            margin: auto;
+            width: 80%;
+            .news {
+                margin-top: 10px;
+                float: right;
+                width: 20%;
+                padding: 20px;
+                border: 1px solid;
+                .news_content {
+                    padding-left: 10%;
+                }
+            }
+            .recommended {
+                margin-top: 10px;
+                float: left;
+                padding: 20px;
+                border: 1px solid;
+                width: 65%;
+                .recommended_article {
+                    padding-left: 2%;
+                    list-style: none;
+                }
+            }
+            .access_ranking {
+                float: left;
+                margin-top: 20px;
+                padding: 20px;
+                border: 1px solid;
+                width: 65%;
+                .access_ranking_article {
+                    padding-left: 2%;
+                    width: 80%;
+                    list-style: none;
+                }
+            }
+        }
+    }
+}

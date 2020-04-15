@@ -1,0 +1,57 @@
+jsファイル
+    $(function() {
+        $("header").load("../common_file/header/header.html");
+        $("footer").load("../common_file/footer/footer.html");
+    });
+
+
+HTMLファイル（～～～～のところを記述）
+    <!doctype html>
+    <html lang="ja">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+        <title>Manato's diary | </title>
+        <!-- CSSファイルの読み込み -->
+        <link rel="stylesheet" href="～～～～～～.css">
+        <link rel="stylesheet" href="../common_file/header/header.css">
+        <link rel="stylesheet" href="../common_file/footer/footer.css">
+        <!-- jQueryライブラリの読み込み -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+
+
+    <body>
+
+        <header>
+        </header>
+
+
+        <main>
+            <div id="main_content">
+                <h2 id="title"></h2>
+            </div>
+        </main>
+
+
+        <footer>
+        </footer>
+
+
+        <!-- jsファイルの読み込み -->
+        <script src="～～～～～～.js"></script>
+    </body>
+
+    </html>
+
+
+
+
+SCSSファイル（拡張子scss！）
+    /*デフォルトで入る余計な余白を取り除く*/
+    * {
+        margin: 0;
+        padding: 0;
+    }

@@ -1,0 +1,43 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /*スマホ用メディアクエリ　ブレイクポイント　～559px*/
+    
+    @media screen and (max-width: 559px) {
+        #blog_category {
+            width: 96%;
+            margin: 20px auto;
+            #blog_category_content {
+                padding-top: 10px;
+                padding-left: 8%;
+                ul>li {
+                    padding-bottom: 15px;
+                    ol {
+                        padding-left: 3%;
+                    }
+                }
+            }
+        }
+    }
+    /*タブレット用メディアクエリ　ブレイクポイント560～960px*/
+    
+    @media screen and (min-width:600px) and (max-width:959px) {}
+    /*㍶用メディアクエリ　ブレイクポイント960px~　*/
+    
+    @media screen and (min-width: 960px) {
+        #blog_category {
+            width: 60%;
+            margin: 30px auto;
+            #blog_category_content {
+                padding-top: 20px;
+                padding-left: 4%;
+                ul>li {
+                    padding-bottom: 15px;
+                    ol {
+                        padding-left: 3%;
+                    }
+                }
+            }
+        }
+    }

@@ -1,0 +1,136 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+
+
+
+
+スマホ用メディアクエリ　ブレイクポイント　～559px*/
+/*
+
+
+
+
+タブレット用メディアクエリ　ブレイクポイント560～960px*/
+/*
+
+
+
+
+㍶用メディアクエリ　ブレイクポイント960px~　*/
+@media screen and (min-width: 960px) {
+  #main_content {
+    margin: 50px auto;
+    width: 80%;
+    overflow: hidden;
+    /*親要素にこれをつけるとmarginの問題が解消*/
+  }
+  #main_content #title {
+    width: 100%;
+    padding-left: 1%;
+    font-size: 24px;
+    position: relative;
+    color: white;
+    padding: 0.5em 0.5em 0.5em 1.4em;
+    background-color: #446689;
+  }
+  #main_content #title:after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    content: '';
+    width: 18px;
+    height: 4px;
+    background-color: white;
+  }
+  #main_content .content {
+    padding: 20px 0 20px 10px;
+  }
+  #main_content .content .caption {
+    position: relative;
+    padding: 0 0 0 0.7em;
+    margin-right: 1%;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+  }
+  #main_content .content .caption:after {
+    position: absolute;
+    top: 0.2em;
+    left: 0;
+    content: '';
+    width: 5px;
+    height: 1em;
+    background-color: #446689;
+  }
+  #main_content .content > p {
+    padding: 5px 2% 0 1.5%;
+  }
+  #main_content .content > a {
+    display: block;
+    padding: 5px 2% 0 1.5%;
+  }
+  #main_content .content > ul {
+    padding-top: 5px;
+    padding-left: 2%;
+    list-style: none;
+  }
+  #main_content .sub_content {
+    padding-left: 1%;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+  #main_content .sub_content .sub_caption {
+    padding-left: 1%;
+    margin-right: 80%;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, #fff100));
+    background: linear-gradient(transparent 70%, #fff100 70%);
+  }
+  #main_content .sub_content p {
+    padding: 5px 2% 0 2%;
+  }
+  #main_content .sub_content > ul {
+    padding-top: 5px;
+    padding-left: 2%;
+    list-style: none;
+  }
+  #main_content .sub_content .conclusion {
+    color: red;
+  }
+  #main_content .sub_content .white_black {
+    padding-left: 4%;
+  }
+  #main_content .sub_content .blank {
+    height: 15px;
+  }
+  #main_content #img_visible_light {
+    padding: 10px 0 10px 10%;
+  }
+  #main_content #img_visible_light img {
+    width: 50%;
+  }
+  #main_content #why_can_you_see_red {
+    padding: 10px 0 10px 5%;
+  }
+  #main_content #why_can_you_see_red img {
+    width: 70%;
+  }
+  #main_content #linesensor_img {
+    padding: 10px 0 10px 5%;
+  }
+  #main_content #linesensor_img img {
+    width: 50%;
+  }
+  #main_content .prettyprint {
+    margin: 5px 5% 0 5%;
+  }
+  #main_content .prettyprint ol.linenums > li {
+    list-style-type: decimal;
+  }
+}
+/*# sourceMappingURL=robocup_linesensor1.css.map */
