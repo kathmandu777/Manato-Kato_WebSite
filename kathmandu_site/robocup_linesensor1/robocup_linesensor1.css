@@ -10,6 +10,162 @@
 
 
 スマホ用メディアクエリ　ブレイクポイント　～559px*/
+@media screen and (max-width: 559px) {
+  #main_content {
+    margin: 20px auto;
+    width: 98%;
+    overflow: hidden;
+    /*親要素にこれをつけるとmarginの問題が解消*/
+  }
+  #main_content #title {
+    width: 100%;
+    padding-left: 1%;
+    font-size: 20px;
+    position: relative;
+    color: white;
+    padding: 0.5em 0.5em 0.5em 1.4em;
+    background-color: #446689;
+  }
+  #main_content #title:after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    content: "";
+    width: 18px;
+    height: 4px;
+    background-color: white;
+  }
+  #main_content .content {
+    padding: 20px 0 10px 1%;
+  }
+  #main_content .content .caption {
+    position: relative;
+    padding: 0 0 0 0.7em;
+    margin-right: 1%;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+  }
+  #main_content .content .caption:after {
+    position: absolute;
+    top: 0.2em;
+    left: 0;
+    content: "";
+    width: 5px;
+    height: 1em;
+    background-color: #446689;
+  }
+  #main_content .content > p {
+    padding: 5px 2% 0 1.5%;
+    font-size: 14px;
+  }
+  #main_content .content > a {
+    display: block;
+    padding: 5px 2% 0 1.5%;
+  }
+  #main_content .content > ul {
+    padding-top: 5px;
+    padding-left: 2%;
+    list-style: none;
+  }
+  #main_content .sub_content {
+    padding-left: 1%;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+  #main_content .sub_content .sub_caption {
+    padding-left: 1%;
+    margin-right: 40%;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, #fff100));
+    background: linear-gradient(transparent 70%, #fff100 70%);
+  }
+  #main_content .sub_content p {
+    padding: 5px 2% 0 2%;
+    font-size: 14px;
+  }
+  #main_content .sub_content > ul {
+    font-size: 14px;
+    padding-top: 5px;
+    padding-left: 4%;
+  }
+  #main_content .sub_content .conclusion {
+    color: red;
+  }
+  #main_content .sub_content .white_black {
+    padding-left: 4%;
+  }
+  #main_content .sub_content .blank {
+    height: 15px;
+  }
+  #main_content #img_visible_light {
+    padding: 10px 0 10px 1%;
+  }
+  #main_content #img_visible_light img {
+    width: 100%;
+  }
+  #main_content #why_can_you_see_red {
+    padding: 10px 0 10px 1%;
+  }
+  #main_content #why_can_you_see_red img {
+    width: 100%;
+  }
+  #main_content #linesensor_img {
+    padding: 10px 0 10px 5%;
+  }
+  #main_content #linesensor_img img {
+    width: 100%;
+  }
+  #main_content #circuit_img {
+    padding: 10px 0 10px 3%;
+  }
+  #main_content #circuit_img img {
+    width: 100%;
+  }
+  #main_content #led_njl {
+    padding: 10px 0 10px 5%;
+  }
+  #main_content #led_njl img {
+    width: 60%;
+  }
+  #main_content #breadboard1 {
+    padding: 10px 0 10px 5%;
+  }
+  #main_content #breadboard1 img {
+    width: 100%;
+  }
+  #main_content #breadboard2 {
+    padding: 10px 0 10px 5%;
+  }
+  #main_content #breadboard2 img {
+    width: 100%;
+  }
+  #main_content #prot1 {
+    padding: 10px 0 10px 5%;
+  }
+  #main_content #prot1 img {
+    width: 100%;
+  }
+  #main_content #prot2 {
+    padding: 10px 0 10px 5%;
+  }
+  #main_content #prot2 img {
+    width: 100%;
+  }
+  #main_content #prot3 {
+    padding: 10px 0 10px 5%;
+  }
+  #main_content #prot3 img {
+    width: 100%;
+  }
+  #main_content .prettyprint {
+    margin: 5px 5% 0 5%;
+  }
+  #main_content .prettyprint ol.linenums > li {
+    list-style-type: decimal;
+  }
+}
+
 /*
 
 
@@ -44,7 +200,7 @@
     left: 0;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-    content: '';
+    content: "";
     width: 18px;
     height: 4px;
     background-color: white;
@@ -63,7 +219,7 @@
     position: absolute;
     top: 0.2em;
     left: 0;
-    content: '';
+    content: "";
     width: 5px;
     height: 1em;
     background-color: #446689;
@@ -124,6 +280,48 @@
     padding: 10px 0 10px 5%;
   }
   #main_content #linesensor_img img {
+    width: 50%;
+  }
+  #main_content #circuit_img {
+    padding: 10px 0 10px 3%;
+  }
+  #main_content #circuit_img img {
+    width: 50%;
+  }
+  #main_content #led_njl {
+    padding: 10px 0 10px 5%;
+  }
+  #main_content #led_njl img {
+    width: 10%;
+  }
+  #main_content #breadboard1 {
+    padding: 10px 0 10px 5%;
+  }
+  #main_content #breadboard1 img {
+    width: 50%;
+  }
+  #main_content #breadboard2 {
+    padding: 10px 0 10px 5%;
+  }
+  #main_content #breadboard2 img {
+    width: 70%;
+  }
+  #main_content #prot1 {
+    padding: 10px 0 10px 5%;
+  }
+  #main_content #prot1 img {
+    width: 30%;
+  }
+  #main_content #prot2 {
+    padding: 10px 0 10px 5%;
+  }
+  #main_content #prot2 img {
+    width: 30%;
+  }
+  #main_content #prot3 {
+    padding: 10px 0 10px 5%;
+  }
+  #main_content #prot3 img {
     width: 50%;
   }
   #main_content .prettyprint {

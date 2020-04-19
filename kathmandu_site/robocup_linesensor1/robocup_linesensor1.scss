@@ -11,7 +11,159 @@
 
 スマホ用メディアクエリ　ブレイクポイント　～559px*/
 
-@media screen and (max-width: 559px) {}
+@media screen and (max-width: 559px) {
+    #main_content {
+        margin: 20px auto;
+        width: 98%;
+        overflow: hidden;
+        /*親要素にこれをつけるとmarginの問題が解消*/
+        #title {
+            width: 100%;
+            padding-left: 1%;
+            font-size: 20px;
+            position: relative;
+            color: white;
+            padding: 0.5em 0.5em 0.5em 1.4em;
+            background-color: #446689;
+            &:after {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                content: "";
+                width: 18px;
+                height: 4px;
+                background-color: white;
+            }
+        }
+        .content {
+            padding: 20px 0 10px 1%;
+            .caption {
+                position: relative;
+                padding: 0 0 0 0.7em;
+                margin-right: 1%;
+                border-bottom: 1px solid black;
+                font-size: 20px;
+                &:after {
+                    position: absolute;
+                    top: 0.2em;
+                    left: 0;
+                    content: "";
+                    width: 5px;
+                    height: 1em;
+                    background-color: #446689;
+                }
+            }
+            >p {
+                padding: 5px 2% 0 1.5%;
+                font-size: 14px;
+            }
+            >a {
+                display: block;
+                padding: 5px 2% 0 1.5%;
+            }
+            >ul {
+                padding-top: 5px;
+                padding-left: 2%;
+                list-style: none;
+            }
+        }
+        .sub_content {
+            padding-left: 1%;
+            padding-top: 15px;
+            padding-bottom: 20px;
+            .sub_caption {
+                padding-left: 1%;
+                margin-right: 40%;
+                background: linear-gradient(transparent 70%, #fff100 70%);
+            }
+            p {
+                padding: 5px 2% 0 2%;
+                font-size: 14px;
+            }
+            >ul {
+                font-size: 14px;
+                padding-top: 5px;
+                padding-left: 4%;
+            }
+            .conclusion {
+                color: red;
+            }
+            .white_black {
+                padding-left: 4%;
+            }
+            .blank {
+                height: 15px;
+            }
+        }
+        #img_visible_light {
+            padding: 10px 0 10px 1%;
+            img {
+                width: 100%;
+            }
+        }
+        #why_can_you_see_red {
+            padding: 10px 0 10px 1%;
+            img {
+                width: 100%;
+            }
+        }
+        #linesensor_img {
+            padding: 10px 0 10px 5%;
+            img {
+                width: 100%;
+            }
+        }
+        #circuit_img {
+            padding: 10px 0 10px 3%;
+            img {
+                width: 100%;
+            }
+        }
+        #led_njl {
+            padding: 10px 0 10px 5%;
+            img {
+                width: 60%;
+            }
+        }
+        #breadboard1 {
+            padding: 10px 0 10px 5%;
+            img {
+                width: 100%;
+            }
+        }
+        #breadboard2 {
+            padding: 10px 0 10px 5%;
+            img {
+                width: 100%;
+            }
+        }
+        #prot1 {
+            padding: 10px 0 10px 5%;
+            img {
+                width: 100%;
+            }
+        }
+        #prot2 {
+            padding: 10px 0 10px 5%;
+            img {
+                width: 100%;
+            }
+        }
+        #prot3 {
+            padding: 10px 0 10px 5%;
+            img {
+                width: 100%;
+            }
+        }
+        .prettyprint {
+            margin: 5px 5% 0 5%;
+            ol.linenums>li {
+                list-style-type: decimal;
+            }
+        }
+    }
+}
 
 
 /*
@@ -21,7 +173,7 @@
 
 タブレット用メディアクエリ　ブレイクポイント560～960px*/
 
-@media screen and (min-width:600px) and (max-width:959px) {}
+@media screen and (min-width: 600px) and (max-width: 959px) {}
 
 
 /*
@@ -50,7 +202,7 @@
                 top: 50%;
                 left: 0;
                 transform: translateY(-50%);
-                content: '';
+                content: "";
                 width: 18px;
                 height: 4px;
                 background-color: white;
@@ -68,7 +220,7 @@
                     position: absolute;
                     top: 0.2em;
                     left: 0;
-                    content: '';
+                    content: "";
                     width: 5px;
                     height: 1em;
                     background-color: #446689;
@@ -127,6 +279,48 @@
             }
         }
         #linesensor_img {
+            padding: 10px 0 10px 5%;
+            img {
+                width: 50%;
+            }
+        }
+        #circuit_img {
+            padding: 10px 0 10px 3%;
+            img {
+                width: 50%;
+            }
+        }
+        #led_njl {
+            padding: 10px 0 10px 5%;
+            img {
+                width: 10%;
+            }
+        }
+        #breadboard1 {
+            padding: 10px 0 10px 5%;
+            img {
+                width: 50%;
+            }
+        }
+        #breadboard2 {
+            padding: 10px 0 10px 5%;
+            img {
+                width: 70%;
+            }
+        }
+        #prot1 {
+            padding: 10px 0 10px 5%;
+            img {
+                width: 30%;
+            }
+        }
+        #prot2 {
+            padding: 10px 0 10px 5%;
+            img {
+                width: 30%;
+            }
+        }
+        #prot3 {
             padding: 10px 0 10px 5%;
             img {
                 width: 50%;

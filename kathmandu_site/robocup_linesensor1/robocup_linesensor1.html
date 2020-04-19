@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../common_file/footer/footer.css">
     <!-- jQueryライブラリの読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <!--ソースコード表示のライブラリ-->
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </head>
@@ -71,14 +73,32 @@
                 <div id="material" class="sub_content">
                     <h4 class="sub_caption">材料</h4>
                     <ul>
-                        <li>NJL7502L（フォトトランジスタ）</li>
-                        <li>LED（半減角が小さいもの）</li>
-                        <li>抵抗</li>
+                        <li>NJL7502L（フォトトランジスタ,<a target="_blank" href="https://www.marutsu.co.jp/contents/shop/marutsu/datasheet/NJL7502L_J.pdf">データシート<i class="fas fa-external-link-alt"></i></a>）</li>
+                        <li>LED（半減角が小さいもの,私が使用したのは、3mm,20mA,3V-3.2Vと一般的なもの）</li>
+                        <li>抵抗（今回は、100Ω・10kΩ）</li>
+                        <li>ブレッドボード（<a href="https://thunderblog.org/2019/03/bread_board.html">ブレッドボードとは？<i class="fas fa-external-link-alt"></i></a>）</li>
+                        <li>ジャンパー線（<a href="https://www.amazon.co.jp/uxcell-%E3%83%96%E3%83%AC%E3%83%83%E3%83%89%E3%83%9C%E3%83%BC%E3%83%89%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%91%E3%83%BC%E7%B7%9A-%E3%82%AA%E3%82%B9%EF%BC%8D%E3%82%AA%E3%82%B9-%E3%82%B3%E3%83%8D%E3%82%AF%E3%82%BF-100%E6%9C%AC%E5%85%A5%E3%82%8A/dp/B07797K85L">参考画像<i class="fas fa-external-link-alt"></i></a>）</li>
+                        <li>Arduino</li>
                     </ul>
                 </div>
 
                 <div id="circuit_diagram" class="sub_content">
                     <h4 class="sub_caption">回路図</h4>
+                    <p>回路の知識は全くないので、訳の分からない手書きで許してください。</p>
+                    <div id="circuit_img"><img src="../image/circuit.jpg"></div>
+                </div>
+
+                <div id="bread_board" class="sub_content">
+                    <h4 class="sub_caption">ブレッドボード</h4>
+                    <p>上の回路図を参考に、ブレッドボードに組んでいきます</p>
+                    <p><br></p>
+                    <p>どちらも、足が長い方がプラスとなります。</p>
+                    <div id="led_njl"><img src="../image/LED_NJL.jpg"></div>
+                    <p></p>
+                    <p>LED・NJLどちらも、足が長い方を右側に差し込んでいます。LEDの方の抵抗が100Ω、NJLのほうの抵抗が10kΩです。抵抗値は使用用途に合わせて変えてください。</p>
+                    <div id="breadboard1"><img src="../image/breadboard1.jpg"></div>
+                    <p>Arduinoにジャンパー線をさします。5Vをブレッドボードの+に、GNDを-に、A0をフォトトランジスタとフォトトランジスタの抵抗の間にさします。</p>
+                    <div id="breadboard2"><img src="../image/breadboard2.jpg"></div>
                 </div>
             </div>
 
@@ -89,19 +109,35 @@
 //シリアルプロッタを使うと値が読み取りやすい
 //アナログ0番ピンへ
 
-const int Phototransistor = 0; //PhototransistorをAnalog0番pinに設定
-int val = 0; //A0から読み込んだ値を格納する変数
+const int Phototransistor = 0; 
+//PhototransistorをAnalog0番pinに設定
+
+int val = 0;
+//A0から読み込んだ値を格納する変数
 
 void setup() {
-    Serial.begin(9600); //9600bpsでシリアルポートを開く        
+    Serial.begin(9600); 
+    //9600bpsでシリアルポートを開く        
 }
 
 void loop() {
-    val = analogRead(Phototransistor);  //A0pinからアナログ値を読み取る
-    Serial.println(val);  //シリアルポートへvalを出力
-    delay(100);  //0.1秒ごとにループ
+    val = analogRead(Phototransistor);  
+    //A0pinからアナログ値を読み取る
+
+    Serial.println(val);  
+    //シリアルポートへvalを出力
+
+    delay(100);  
+    //0.1秒ごとにループ
 }
 </pre>
+                <p><br></p>
+                <h4>シリアルプロッタで値を見ていきます。</h4>
+                <p>反射するものが何もないと（ロボカップで言うと、緑色のフィールドにいるとき）、0に近い値を返します。</p>
+                <div id="prot1"><img src="../image/prot1.jpg"></div>
+                <p>反射するものがあると（ロボカップで言うと、白線にのっているとき）、1000に近い値を返します。</p>
+                <div id="prot2"><img src="../image/prot2.jpg"></div>
+                <div id="prot3"><img src="../image/prot3.png"></div>
                 <p>Arduinoのシリアルプロッタという機能を使うと、数値をグラフ表示してくれるため、視認性がとても良いです。ぜひ使ってみてください。</p>
             </div>
 
@@ -109,9 +145,10 @@ void loop() {
                 <h3 class="caption">画像の出典</h3>
                 <p>（一枚目から順に以下から引用しています）</p>
                 <ul>
-                    <li><a href="https://www.toho-u.ac.jp/sci/biomol/glossary/chem/j5mt8h000000dqpb-img/vis.jpg" target="_blank">東邦大学</a></li>
-                    <li><a href="https://ironokoto.com/what-is-color" target="_blank">イロノコト</a></li>
-                    <li><a href="http://www.cct.ac.jp/mech/yume2/IMAGE/IMAGE003.JPG">ライントレーサーを作ろう</a></li>
+                    <li><a href="https://www.toho-u.ac.jp/sci/biomol/glossary/chem/j5mt8h000000dqpb-img/vis.jpg" target="_blank">東邦大学<i class="fas fa-external-link-alt"></i></a></li>
+                    <li><a href="https://ironokoto.com/what-is-color" target="_blank">イロノコト<i class="fas fa-external-link-alt"></i></a></li>
+                    <li><a href="http://www.cct.ac.jp/mech/yume2/IMAGE/IMAGE003.JPG">ライントレーサーを作ろう<i class="fas fa-external-link-alt"></i></a></li>
+                    <li>4枚目からは、筆者が撮った画像です。</li>
                 </ul>
             </div>
 
