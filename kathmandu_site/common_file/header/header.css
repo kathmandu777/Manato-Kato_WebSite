@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*デフォルトで入る余計な余白を取り除く*/
 * {
   margin: 0;
   padding: 0;
@@ -93,10 +92,10 @@
     position: absolute;
     width: 30px;
     border-bottom: solid 3px #000;
-    -webkit-transition: .35s ease-in-out;
+    -webkit-transition: 0.35s ease-in-out;
     /*変化の速度を指定*/
     /*変化の速度を指定*/
-    transition: .35s ease-in-out;
+    transition: 0.35s ease-in-out;
     /*変化の速度を指定*/
     left: 6px;
   }
@@ -141,7 +140,7 @@
   #header #quote h3 {
     text-align: center;
     font-size: 22px;
-    font-family: 'Sacramento', cursive;
+    font-family: "Sacramento", cursive;
     color: white;
   }
   #header #quote p {
@@ -209,7 +208,7 @@
   #header #quote h3 {
     text-align: center;
     font-size: 58px;
-    font-family: 'Sacramento', cursive;
+    font-family: "Sacramento", cursive;
     color: white;
   }
   #header #quote p {
